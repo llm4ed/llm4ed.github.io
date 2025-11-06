@@ -1,0 +1,96 @@
+---
+layout: default
+format: frontpage
+---
+<div id="header-home">
+    <div class="row t30 b20 homepage">
+        <div class="small-12 columns">
+            <p>
+                <img width="970" src="{{ '/images/Ed_RoadMap-home.jpg' | relative_url }}" alt="Emergency Department LLM roadmap">
+            </p>
+            <p class="text-right caption">RoadMap for LLM application in Emergency Department</p>
+        </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+
+
+    <div class="row">
+        <div class="small-12 columns">
+        </div><!-- /.medium-4.columns -->
+    </div><!-- /.row -->
+</div><!-- /#header-home -->
+
+
+{% comment %}
+*
+* First check, if widget is empty or not by checking if there is a title
+*
+{% endcomment %}
+<div class="row t60">
+	{% if page.widget1.image or page.widget1.video or page.widget1.title %}
+		{% include _frontpage-widget.html widget=page.widget1 %}
+	{% endif %}
+
+	{% if page.widget2.image or page.widget2.video or page.widget2.title %}
+		{% include _frontpage-widget.html widget=page.widget2 %}
+	{% endif %}
+
+	{% if page.widget3.image or page.widget3.video or page.widget3.title %}
+		{% include _frontpage-widget.html widget=page.widget3 %}
+	{% endif %}
+</div><!-- /.row -->
+
+
+
+{% comment %}
+*
+* First check, if there is a call for action-button
+*
+{% endcomment %}
+{% if page.callforaction.url contains 'http' %}
+{% assign url = '' %}
+{% else %}
+{% capture url %}{{ site.url }}{{ site.baseurl }}{% endcapture %}
+{% endif %}
+{% if page.callforaction %}
+    <div class="row t60 b60">
+        <div class="small-12 text-center columns">
+            <a class="button large radius {{ page.callforaction.style }}" href="{{ url }}{{ page.callforaction.url }}"{% if page.callforaction.url contains 'http' %} target="_blank" {% endif %}>{{ page.callforaction.text }}</a>
+        </div><!-- /.small-12.columns -->
+    </div><!-- /.row -->
+{% endif %}
+
+
+
+    <div class="row">
+        <div class="medium-6 columns">
+            <h2><a href="https://demo.ai4ed.ca/" target="_blank">Emergency Department Workflow Simulation</a></h2>
+            <p>
+                Explore how aligned large language model agents coordinate triage, assessment, and disposition decisions in our virtual emergency department. 
+                <a href="https://demo.ai4ed.ca/" target="_blank"><strong>Launch the demo</strong></a>
+            </p>
+        </div><!-- /.medium-5.columns -->
+
+
+        <div class="medium-6 columns">
+            <p><strong>Recent Publications</strong></p>
+            {% for paper in site.data.publications %}
+            <div class="t15">
+                <p class="publication-title"><a href="{{ paper.url }}">{{ paper.title }}</a></p>
+                <p class="small">{{ paper.venue }} – {{ paper.status }}</p>
+                <p class="small">{{ paper.summary }}</p>
+            </div>
+            {% endfor %}
+            <p class="t20"><a class="button tiny radius" href="{{ '/publications/' | relative_url }}">View all publications</a></p>
+        </div><!-- /.medium-7.columns -->
+    </div><!-- /.row -->
+
+
+{% comment %}
+*
+* Finally, if there is content, spit it out.
+*
+{% endcomment %}
+
+<div class="row">
+    {{ content }}
+</div><!-- /.row -->
