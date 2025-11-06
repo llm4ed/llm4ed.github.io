@@ -1,0 +1,43 @@
+{% comment %}
+*
+*   First the include captures the url and image in a
+*   separate variable to make the code better readable.
+*
+*   These variables are widget_url and widget_image
+*
+{% endcomment %}
+
+{% capture widget_url %}{% if include.widget.url == NULL %}{% elsif include.widget.url contains 'http' %}{{ include.widget.url }}{% else %}{{ include.widget.url | relative_url }}{% endif %}{% endcapture %}
+
+{% assign widget_image_source = include.widget.image | default: '' %}
+{% assign widget_image_path = '' %}
+{% capture widget_image %}
+  {% if widget_image_source contains 'http' %}
+    {{ widget_image_source }}
+  {% elsif widget_image_source contains '/' %}
+    {{ widget_image_source | relative_url }}
+  {% elsif widget_image_source != '' %}
+    {% assign widget_image_path = '/images/' | append: widget_image_source %}
+    {{ widget_image_path | relative_url }}
+  {% endif %}
+{% endcapture %}
+
+{% assign widget_url_clean = widget_url | strip %}
+{% assign widget_image_clean = widget_image | strip %}
+
+
+<div class="medium-4 columns frontpage-widget">
+	{% if include.widget.video %}
+		{{ include.widget.video }}
+	{% elsif widget_url_clean == empty %}
+		{% if widget_image_clean != empty %}<img src="{{ widget_image_clean }}" alt="" />{% endif %}
+	{% else %}
+		<a href="{{ widget_url_clean }}">
+			{% if widget_image_clean != empty %}<img src="{{ widget_image_clean }}" alt="" />{% endif %}
+		</a>
+	{% endif %}
+	<h2 class="font-size-h3 t10">{{ include.widget.title }}</h2>
+
+	{% if include.widget.text != empty %}<p>{{ include.widget.text }}</p>{% endif %}
+	{% if widget_url_clean != empty %}<p><a class="button tiny radius" href="{{ widget_url_clean }}">{{ site.data.language.more }}</a></p>{% endif %}
+</div>

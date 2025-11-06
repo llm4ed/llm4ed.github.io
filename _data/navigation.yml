@@ -1,0 +1,35 @@
+- title: Overview
+  url: "/"
+  side: left
+
+- title: Getting Started
+  url: "/getting-started/"
+  side: left
+
+- title: "Teams"
+  url: "/team/"
+  side: left
+  dropdown:
+    - title: "Academia"
+      url: "/team/academia/"
+    - title: "Medical Professionals"
+      url: "/team/medical-professionals/"
+    - title: "Students"
+      url: "/team/students/"
+
+- title: "Background"
+  url: "/background/"
+  side: left
+
+- title: Publications
+  url: "/publications/"
+  side: left
+
+- title: News
+  url: "/news/"
+  side: left
+  dropdown:
+
+- title: "Contact"
+  url: "/contact/"
+  side: right
