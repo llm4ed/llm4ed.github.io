@@ -1,3 +1,10 @@
+- title: "EDSim: An Agentic Simulator for Emergency Department Operations"
+  url: "https://www.researchsquare.com/article/rs-8960989/v1"
+  venue: "npj Digital Medicine"
+  status: "Submitted"
+  authors: "Jiajun Wu, Hutton Ledingham, Zirui Wang, Braden Teitge, Alexander Burn, Oussama Ouadihi, Mohamad Ghattas, Darin Vicaldo, Sergiu Cociuba, Megan Harmon, Tanvir Chowdhury, Zack Marshall, Tyler Williamson, Tracie Risling, Eddy Lang, Jiayu Zhou, Jessalyn Holodinsky, Steve Drew"
+  summary: "Introduces an agentic emergency department simulator that combines LLM-driven clinician and patient behavior with data-driven operational modeling for workflow experiments."
+
 - title: "Fine-tuned large language models guided by physician feedback can improve patient chart summarization for emergency departments"
   url: "https://www.xcdsystem.com/caep/program/HELIA8f/index.cfm?pgid=2166&sid=43882&abid=136770"
   venue: "ICEM 2025 – International Conference on Emergency Medicine"

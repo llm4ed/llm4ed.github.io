@@ -2,23 +2,12 @@
   url: "/"
   side: left
 
-- title: Getting Started
-  url: "/getting-started/"
+- title: "Overview & Setup"
+  url: "/background/"
   side: left
 
 - title: "Teams"
   url: "/team/"
-  side: left
-  dropdown:
-    - title: "Academia"
-      url: "/team/academia/"
-    - title: "Medical Professionals"
-      url: "/team/medical-professionals/"
-    - title: "Students"
-      url: "/team/students/"
-
-- title: "Background"
-  url: "/background/"
   side: left
 
 - title: Publications
@@ -29,6 +18,14 @@
   url: "/news/"
   side: left
   dropdown:
+
+- title: Newsletter
+  url: "/newsletter/"
+  side: left
+
+- title: Questionnaire
+  url: "/event/"
+  side: left
 
 - title: "Contact"
   url: "/contact/"
