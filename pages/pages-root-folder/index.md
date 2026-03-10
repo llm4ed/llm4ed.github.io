@@ -15,7 +15,7 @@ widget1:
     Learn why we are building an emergency department LLM simulation and how Canadian ED pressures shape our work.
 widget2:
   title: "Teams"
-  url: "/team/academia/"
+  url: "/team/"
   image: DenosLab.jpg
   text: >
     Meet the collaborators engineering our emergency department simulations and supporting deployments.

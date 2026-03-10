@@ -1,8 +1,8 @@
 ---
 layout: page
 subheadline: "Emergency Department Simulation"
-title: "Background and Motivation"
-teaser: "A high-level overview of why we are building an emergency department LLM simulation and the impact we hope it will have."
+title: "Overview & Setup"
+teaser: "A combined overview of the project background, motivation, and how to access the AI4ED simulation setup resources."
 header:
    image_fullwidth  : "widget_hospital_background.jpg"
 
@@ -36,3 +36,11 @@ We expect these LLM-powered tools to unlock timelier, more accurate diagnoses, l
 - ED patients
 
 This diverse team ensures that our research stays technically sound, ethically grounded, and aligned with the real-world needs of both patients and healthcare providers.
+
+## Installing and Demo the AI4ED project
+
+### A Step-by-Step Guide
+
+We provide the AI4ED simulation project through our GitHub repository. You can download or clone the code there and follow the step-by-step installation and demo instructions to initialize the Simulated ED environment.
+
+[Get Started on GitHub](https://github.com/denoslab/EDSim){: .button target="_blank" rel="noopener noreferrer" }
