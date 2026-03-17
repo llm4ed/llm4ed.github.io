@@ -8,6 +8,17 @@ header:
 
 Our team regularly shares progress and learns with the broader emergency medicine community. Recent activities include:
 
+### AI4ED Team Retreat Lunch — March 16, 2026
+Our team gathered for a retreat lunch to connect across the project, reflect on recent progress, and discuss next steps for AI4ED research and development.
+
+<figure class="t30 b30">
+  <img src="{{ '/images/Activities/ai4ed-team-retreat-2026-03-16-1-1200.jpg' | relative_url }}" alt="AI4ED team retreat lunch group photo at the restaurant">
+</figure>
+
+<figure class="t30 b30">
+  <img src="{{ '/images/Activities/ai4ed-team-retreat-2026-03-16-2-1200.jpg' | relative_url }}" alt="AI4ED team retreat lunch table photo with team members">
+</figure>
+
 ### Emergency Medicine Research Day 2025 — May 28, 2025
 - Gerry Wu and Alexander Burn presented our latest work on patient-chart summarization and agent-based simulation.
 
