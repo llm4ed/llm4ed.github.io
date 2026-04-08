@@ -1,9 +1,6 @@
 {% comment %}
 *
-*   First the include captures the url and image in a
-*   separate variable to make the code better readable.
-*
-*   These variables are widget_url and widget_image
+*   Frontpage feature widget.
 *
 {% endcomment %}
 
@@ -24,20 +21,25 @@
 
 {% assign widget_url_clean = widget_url | strip %}
 {% assign widget_image_clean = widget_image | strip %}
-
+{% assign widget_is_external = false %}
+{% if include.widget.url contains 'http' %}
+  {% assign widget_is_external = true %}
+{% endif %}
 
 <div class="medium-4 columns frontpage-widget">
-	{% if include.widget.video %}
-		{{ include.widget.video }}
-	{% elsif widget_url_clean == empty %}
-		{% if widget_image_clean != empty %}<img src="{{ widget_image_clean }}" alt="" />{% endif %}
-	{% else %}
-		<a href="{{ widget_url_clean }}">
-			{% if widget_image_clean != empty %}<img src="{{ widget_image_clean }}" alt="" />{% endif %}
-		</a>
-	{% endif %}
-	<h2 class="font-size-h3 t10">{{ include.widget.title }}</h2>
+  <div class="frontpage-widget__card">
+    <div class="frontpage-widget__media{% if include.widget.image == 'DenosLab.jpg' %} frontpage-widget__media--contain{% endif %}">
+      {% if include.widget.video %}
+        {{ include.widget.video }}
+      {% elsif widget_image_clean != empty %}
+        <img src="{{ widget_image_clean }}" alt="{{ include.widget.image_alt | default: include.widget.title | escape }}" />
+      {% endif %}
+    </div>
 
-	{% if include.widget.text != empty %}<p>{{ include.widget.text }}</p>{% endif %}
-	{% if widget_url_clean != empty %}<p><a class="button tiny radius" href="{{ widget_url_clean }}">{{ site.data.language.more }}</a></p>{% endif %}
+    <div class="frontpage-widget__content">
+      <h2 class="font-size-h3 t10">{{ include.widget.title }}</h2>
+      {% if include.widget.text != empty %}<p class="frontpage-widget__summary">{{ include.widget.text }}</p>{% endif %}
+      {% if widget_url_clean != empty %}<p class="frontpage-widget__action"><a class="button tiny radius" href="{{ widget_url_clean }}"{% if widget_is_external %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ include.widget.button_text | default: 'Explore' }}</a></p>{% endif %}
+    </div>
+  </div>
 </div>

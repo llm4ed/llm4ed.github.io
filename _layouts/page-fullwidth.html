@@ -11,14 +11,13 @@ format: page-fullwidth
 			<a href="{{ page.image.caption_url }}">{{ page.image.caption }}</a>
 		</p>
 		{% endif %}
-	</div><!-- /.small-12.columns -->
-</div><!-- /.row -->
+	</div>
+</div>
 {% endif %}
 
-
-<div class="row t30">
+<div class="row ai4ed-page-shell t30">
 	<div class="medium-12 columns">
-		<article>
+		<article class="ai4ed-page-panel ai4ed-page-panel--wide">
 			<header>
 				{% if page.subheadline %}<p class="subheadline">{{ page.subheadline }}</p>{% endif %}
 				<h1>{{ page.title }}</h1>
@@ -32,7 +31,5 @@ format: page-fullwidth
 
 			{{ content }}
 		</article>
-	</div><!-- /.medium-12.columns -->
-</div><!-- /.row -->
-
-
+	</div>
+</div>

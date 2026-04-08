@@ -20,6 +20,7 @@
 
 {% endcapture %}<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="theme-color" content="#081b34">
 	<title>{{ title }}</title>
 
     <link rel="stylesheet" type="text/css" href="{{ url }}/assets/css/styles_feeling_responsive.css">
@@ -34,13 +35,13 @@
 	<script>
 		WebFont.load({
 			google: {
-				families: [ 'Lato:400,700,400italic:latin', 'Volkhov::latin' ]
+				families: [ 'Sora:500,600,700:latin', 'IBM Plex Sans:400,500,600,700:latin', 'IBM Plex Mono:500,600:latin', 'Syne:500,600,700,800:latin' ]
 			}
 		});
 	</script>
 
 	<noscript>
-		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic%7CVolkhov' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/css?family=Sora:500,600,700|IBM+Plex+Sans:400,500,600,700|IBM+Plex+Mono:500,600|Syne:500,600,700,800&display=swap" rel="stylesheet" type="text/css">
 	</noscript>
 
 
@@ -100,4 +101,3 @@
 		gtag('config', '{{ site.google_analytics_tracking_id }}');
 	</script>
 	{% endif %}
-

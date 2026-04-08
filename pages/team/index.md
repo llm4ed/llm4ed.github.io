@@ -1,162 +1,150 @@
 ---
-layout: page
+layout: page-fullwidth
 title: "Team"
+subheadline: "Interdisciplinary researchers, clinicians, and student collaborators"
+teaser: "AI4ED brings together expertise in emergency medicine, machine learning, informatics, social science, and engineering to build clinically grounded AI tools for emergency department workflows."
 permalink: "/team/"
 header:
-  image_fullwidth: "header_unsplash_7.jpg"
+  image_fullwidth: "visuals/header_ai4ed_signal.svg"
 ---
 
-Our interdisciplinary team is organized into four groups: **Project Leads**, **Researchers**, **Clinicians**, and **Students**.
-
-## Project Leads
-
-### <a href="https://profiles.ucalgary.ca/steve-drew" target="_blank" rel="noopener noreferrer">Steve Drew</a>
-**Role:** *Assistant Professor*
-
-**Research focus:** *LLM Application / Federated Learning*
-
----
-
-### <a href="https://profiles.ucalgary.ca/jessalyn-holodinsky" target="_blank" rel="noopener noreferrer">Jessalyn Kathryn Holodinsky</a>
-**Role:** *Assistant Professor*
-
-**Research focus:** *Improving emergency care delivery and optimizing resource use in the emergency department through health data, machine learning, and health systems research.*
-
----
-
-## Researchers
-
-### <a href="https://profiles.ucalgary.ca/steve-drew" target="_blank" rel="noopener noreferrer">Steve Drew</a>
-**Role:** *Assistant Professor*
-
-**Research focus:** *LLM Application / Federated Learning*
-
----
-
-### <a href="https://profiles.ucalgary.ca/jessalyn-holodinsky" target="_blank" rel="noopener noreferrer">Jessalyn Kathryn Holodinsky</a>
-**Role:** *Assistant Professor*
-
-**Research focus:** *Improving emergency care delivery and optimizing resource use in the emergency department through health data, machine learning, and health systems research.*
-
----
-
-### <a href="https://cumming.ucalgary.ca/departments/emergency-medicine/profiles/eddy-lang" target="_blank" rel="noopener noreferrer">Eddy Lang</a>
-**Role:** *Academic & Clinical Department Head, Department of Emergency Medicine, Cumming School of Medicine, University of Calgary & Alberta Health Services*
-
-**Research focus:** *Knowledge translation, evidence-based medicine, health services research*
-
----
-
-### <a href="https://jiayuzhou.github.io/" target="_blank" rel="noopener noreferrer">Jiayu Zhou</a>
-**Role:** *Associate Professor*
-
-**Research focus:** *AI and machine learning, especially scalable and interpretable methods for complex healthcare and real-world data.*
-
----
-
-### <a href="https://profiles.ucalgary.ca/zack-marshall" target="_blank" rel="noopener noreferrer">Zack Marshall</a>
-**Role:** *Associate Professor, Department of Community Health Sciences, University of Calgary*
-
-**Research focus:** *2SLGBTQ+ health equity, harm reduction, participatory research*
-
----
-
-### <a href="https://profiles.ucalgary.ca/tracie-risling" target="_blank" rel="noopener noreferrer">Tracie Risling</a>
-**Role:** *Associate Dean, Innovation & Research, Faculty of Nursing, University of Calgary*
-
-**Research focus:** *Nursing informatics, digital health solutions, co-design, social media, workforce support*
-
----
-
-### <a href="https://profiles.ucalgary.ca/tanvir-chowdhury" target="_blank" rel="noopener noreferrer">Tanvir Turin Chowdhury</a>
-**Role:** *Associate Professor, Department of Family Medicine*
-
-**Research focus:** *Epidemiology*
-
----
-
-### <a href="https://cumming.ucalgary.ca/centres/centre-health-informatics/profiles/tyler-williamson" target="_blank" rel="noopener noreferrer">Tyler Williamson</a>
-**Role:** *Director in Centre for Health Informatics*
-
-**Research focus:** *Biostatistics*
-
----
-
-## Clinicians
-
-### <a href="https://cumming.ucalgary.ca/departments/emergency-medicine/profiles/eddy-lang" target="_blank" rel="noopener noreferrer">Eddy Lang</a>
-**Role:** *Academic & Clinical Department Head, Department of Emergency Medicine, Cumming School of Medicine, University of Calgary & Alberta Health Services*
-
-**Clinical focus:** *Emergency medicine leadership, knowledge translation, and implementation science*
-
----
-
-### Braden Teitge
-**Role:** *Emergency Medicine Physician, Calgary Zone, Alberta Health Services*
-
-**Clinical focus:** *Emergency Medicine / Family Medicine (CCFP-EM)*
-
----
-
-### Riley Martens
-**Role:** *Registered Nurse / Master's Student, University of Calgary*
-
-**Clinical focus:** *Peer support, young adult cancer survivorship, social media platforms for peer support in health contexts*
-
----
-
-## Students
-
-### Gerry Wu
-**Role:** *PhD Candidate*
-
-**Research focus:** *LLM Application / Federated Learning*
-
----
-
-### Samuel Wang
-**Role:** *Master Student*
-
-**Research focus:** *LLM Application*
-
----
-
-### Alexander Burn
-**Role:** *Master Student*
-
-**Research focus:** *LLM Application*
-
----
-
-### Sergiu Cociuba
-**Role:** *Master's Student*
-
-**Research focus:** *Machine Learning / Bioinformatics*
-
----
-
-### Megan Harmon
-**Role:** *Data Analyst, Department of Emergency Medicine*
-
-**Research focus:** *Improving emergency care delivery and optimizing resource use in the emergency department through health data, machine learning, and health systems research.*
-
----
-
-### Hutton Ledingham
-**Role:** *Summer Intern*
-
-**Focus:** *LLM Application*
-
----
-
-### Swaleh Zaidi
-**Role:** *Summer Intern*
-
-**Focus:** *LLM Application*
-
----
-
-### Eldar Ibrahimov
-**Role:** *High School Student*
-
-**Focus:** *Website Development*
+<div class="ai4ed-section-intro">
+  <p>Our team is organized into four groups: <strong>Project Leads</strong>, <strong>Researchers</strong>, <strong>Clinicians</strong>, and <strong>Students</strong>. Together, these collaborators shape the scientific direction, technical implementation, and real-world relevance of the AI4ED project.</p>
+</div>
+
+<section class="team-section team-section--featured">
+  <h2>Project Leads</h2>
+  <div class="team-grid">
+    <article class="team-card">
+      <h3><a href="https://profiles.ucalgary.ca/steve-drew" target="_blank" rel="noopener noreferrer">Steve Drew</a></h3>
+      <p class="team-card__role">Assistant Professor</p>
+      <p><span class="team-card__label">Research Focus</span>LLM applications and federated learning.</p>
+    </article>
+
+    <article class="team-card">
+      <h3><a href="https://profiles.ucalgary.ca/jessalyn-holodinsky" target="_blank" rel="noopener noreferrer">Jessalyn Kathryn Holodinsky</a></h3>
+      <p class="team-card__role">Assistant Professor</p>
+      <p><span class="team-card__label">Research Focus</span>Improving emergency care delivery and optimizing resource use in the emergency department through health data, machine learning, and health systems research.</p>
+    </article>
+  </div>
+</section>
+
+<section class="team-section">
+  <h2>Researchers</h2>
+  <div class="team-section__note">
+    <p>Project leads <a href="https://profiles.ucalgary.ca/steve-drew" target="_blank" rel="noopener noreferrer">Steve Drew</a> and <a href="https://profiles.ucalgary.ca/jessalyn-holodinsky" target="_blank" rel="noopener noreferrer">Jessalyn Kathryn Holodinsky</a> also contribute to this research group.</p>
+  </div>
+  <div class="team-grid">
+    <article class="team-card">
+      <h3><a href="https://jiayuzhou.github.io/" target="_blank" rel="noopener noreferrer">Jiayu Zhou</a></h3>
+      <p class="team-card__role">Associate Professor</p>
+      <p><span class="team-card__label">Research Focus</span>AI and machine learning, especially scalable and interpretable methods for complex healthcare and real-world data.</p>
+    </article>
+
+    <article class="team-card">
+      <h3><a href="https://profiles.ucalgary.ca/zack-marshall" target="_blank" rel="noopener noreferrer">Zack Marshall</a></h3>
+      <p class="team-card__role">Associate Professor, Department of Community Health Sciences, University of Calgary</p>
+      <p><span class="team-card__label">Research Focus</span>2SLGBTQ+ health equity, harm reduction, and participatory research.</p>
+    </article>
+
+    <article class="team-card">
+      <h3><a href="https://cumming.ucalgary.ca/departments/emergency-medicine/profiles/eddy-lang" target="_blank" rel="noopener noreferrer">Eddy Lang</a></h3>
+      <p class="team-card__role">Academic &amp; Clinical Department Head, Department of Emergency Medicine, Cumming School of Medicine, University of Calgary &amp; Alberta Health Services</p>
+      <p><span class="team-card__label">Research Focus</span>Knowledge translation, evidence-based medicine, and health services research.</p>
+    </article>
+
+    <article class="team-card">
+      <h3><a href="https://profiles.ucalgary.ca/tracie-risling" target="_blank" rel="noopener noreferrer">Tracie Risling</a></h3>
+      <p class="team-card__role">Associate Dean, Innovation &amp; Research, Faculty of Nursing, University of Calgary</p>
+      <p><span class="team-card__label">Research Focus</span>Nursing informatics, digital health, co-design, social media, and workforce support.</p>
+    </article>
+
+    <article class="team-card">
+      <h3><a href="https://profiles.ucalgary.ca/tanvir-chowdhury" target="_blank" rel="noopener noreferrer">Tanvir Turin Chowdhury</a></h3>
+      <p class="team-card__role">Associate Professor, Department of Family Medicine</p>
+      <p><span class="team-card__label">Research Focus</span>Epidemiology.</p>
+    </article>
+
+    <article class="team-card">
+      <h3><a href="https://cumming.ucalgary.ca/centres/centre-health-informatics/profiles/tyler-williamson" target="_blank" rel="noopener noreferrer">Tyler Williamson</a></h3>
+      <p class="team-card__role">Director, Centre for Health Informatics</p>
+      <p><span class="team-card__label">Research Focus</span>Biostatistics.</p>
+    </article>
+  </div>
+</section>
+
+<section class="team-section">
+  <h2>Clinicians</h2>
+  <div class="team-grid">
+    <article class="team-card">
+      <h3><a href="https://cumming.ucalgary.ca/departments/emergency-medicine/profiles/eddy-lang" target="_blank" rel="noopener noreferrer">Eddy Lang</a></h3>
+      <p class="team-card__role">Academic &amp; Clinical Department Head, Department of Emergency Medicine, Cumming School of Medicine, University of Calgary &amp; Alberta Health Services</p>
+      <p><span class="team-card__label">Clinical Focus</span>Emergency medicine leadership, knowledge translation, and implementation science.</p>
+    </article>
+
+    <article class="team-card">
+      <h3>Braden Teitge</h3>
+      <p class="team-card__role">Emergency Medicine Physician, Calgary Zone, Alberta Health Services</p>
+      <p><span class="team-card__label">Clinical Focus</span>Emergency medicine and family medicine (CCFP-EM).</p>
+    </article>
+
+    <article class="team-card">
+      <h3>Riley Martens</h3>
+      <p class="team-card__role">Registered Nurse / Master&apos;s Student, University of Calgary</p>
+      <p><span class="team-card__label">Clinical Focus</span>Peer support, young adult cancer survivorship, and social media platforms for peer support in health contexts.</p>
+    </article>
+  </div>
+</section>
+
+<section class="team-section">
+  <h2>Students</h2>
+  <div class="team-grid">
+    <article class="team-card">
+      <h3>Gerry Wu</h3>
+      <p class="team-card__role">PhD Candidate</p>
+      <p><span class="team-card__label">Research Focus</span>LLM applications and federated learning.</p>
+    </article>
+
+    <article class="team-card">
+      <h3>Samuel Wang</h3>
+      <p class="team-card__role">Master&apos;s Student</p>
+      <p><span class="team-card__label">Research Focus</span>LLM applications.</p>
+    </article>
+
+    <article class="team-card">
+      <h3>Alexander Burn</h3>
+      <p class="team-card__role">Master&apos;s Student</p>
+      <p><span class="team-card__label">Research Focus</span>LLM applications.</p>
+    </article>
+
+    <article class="team-card">
+      <h3>Sergiu Cociuba</h3>
+      <p class="team-card__role">Master&apos;s Student</p>
+      <p><span class="team-card__label">Research Focus</span>Machine learning and bioinformatics.</p>
+    </article>
+
+    <article class="team-card">
+      <h3>Megan Harmon</h3>
+      <p class="team-card__role">Data Analyst, Department of Emergency Medicine</p>
+      <p><span class="team-card__label">Research Focus</span>Improving emergency care delivery and optimizing resource use in the emergency department through health data, machine learning, and health systems research.</p>
+    </article>
+
+    <article class="team-card">
+      <h3>Hutton Ledingham</h3>
+      <p class="team-card__role">Summer Intern</p>
+      <p><span class="team-card__label">Focus</span>LLM applications.</p>
+    </article>
+
+    <article class="team-card">
+      <h3>Swaleh Zaidi</h3>
+      <p class="team-card__role">Summer Intern</p>
+      <p><span class="team-card__label">Focus</span>LLM applications.</p>
+    </article>
+
+    <article class="team-card">
+      <h3>Eldar Ibrahimov</h3>
+      <p class="team-card__role">High School Student</p>
+      <p><span class="team-card__label">Focus</span>Website development.</p>
+    </article>
+  </div>
+</section>

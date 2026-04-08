@@ -1,46 +1,71 @@
 ---
 layout: page
-subheadline: "Emergency Department Simulation"
-title: "Overview & Setup"
-teaser: "A combined overview of the project background, motivation, and how to access the AI4ED simulation setup resources."
+subheadline: "Project Overview and Repository Access"
+title: "Getting Started"
+teaser: "Understand the clinical problem, the AI4ED research directions, and how to access the simulation repository and setup instructions."
 header:
-   image_fullwidth  : "widget_hospital_background.jpg"
-
+  image_fullwidth: "visuals/header_ai4ed_signal.svg"
 permalink: "/background/"
 ---
 
-**Background.** Canadians rely extensively on Emergency Department (ED) care. In fact, we have the highest rate of ED use among wealthy countries with universal health care. However, the emergency care experience in Canada is substandard. Often, the volume of patients seeking care outmatches the capacity to move patients through the ED, leading to overcrowding. This results in excessive wait times and patients leaving without seeing a physician. This delayed, or lack of, access to care results in poor patient experience and increased risk of morbidity and mortality. We have experienced steadily increasing wait times for patients to see a physician and lengths of stay in the ED over the past decade with no signs of improvement. Overcrowding in the ED has been referred to as the "canary in the coal mine" of the healthcare system. It is not just simply a function of the number of patients presenting to the ED (input), but also depends on ED throughput (length of stay in the ED), and the ability to move patients out of the ED through admission to in-patient units or safe discharge.
+<div class="ai4ed-section-intro">
+  <p>AI4ED studies how clinically grounded AI can reduce information friction and operational pressure in emergency care. The project combines large language models, workflow simulation, and close clinical collaboration to explore tools that are technically rigorous, operationally relevant, and realistic to evaluate.</p>
+</div>
 
-**Motivation.** We are focused on relieving multiple, compounding pressures inside emergency departments:
+<section class="ai4ed-content-section">
+  <p class="ai4ed-kicker">Clinical Context</p>
+  <h2>Emergency care is high-pressure, fragmented, and information-heavy.</h2>
+  <p>Emergency departments operate under sustained demand, limited time, and incomplete information. AI4ED was created to study how AI systems can reduce avoidable friction without losing clinical credibility or operational realism.</p>
+  <div class="ai4ed-feature-grid">
+    <article class="ai4ed-feature-card">
+      <p class="ai4ed-card-tag">Pressure 01</p>
+      <h3>Overcrowding and demand</h3>
+      <p>Patient volumes frequently exceed the capacity of emergency departments, creating persistent pressure on flow and decision-making.</p>
+    </article>
+    <article class="ai4ed-feature-card">
+      <p class="ai4ed-card-tag">Pressure 02</p>
+      <h3>Throughput inefficiency</h3>
+      <p>Delays emerge across triage, assessment, documentation, handoffs, and disposition, making system improvement difficult to test safely.</p>
+    </article>
+    <article class="ai4ed-feature-card">
+      <p class="ai4ed-card-tag">Pressure 03</p>
+      <h3>Documentation burden</h3>
+      <p>Physicians and nurses spend significant time reconstructing patient history from fragmented records and repetitive chart navigation.</p>
+    </article>
+    <article class="ai4ed-feature-card">
+      <p class="ai4ed-card-tag">Pressure 04</p>
+      <h3>Clinical information friction</h3>
+      <p>Past medical history is often difficult to synthesize quickly in urgent care settings, even when the data technically exists.</p>
+    </article>
+  </div>
+</section>
 
-- **High ED utilization rates:** Canada leads wealthy nations in ED use, stretching limited resources.
-- **Inefficient patient throughput:** EDs are sociotechnical systems where human, technical, and organizational factors ripple through every handoff.
-- **Physician and nurse burnout:** Clinicians face record levels of burnout as documentation and chart review consume scarce time.
-- **Electronic health record friction:** Clinicians often meet patients for the first time in the ED and must rapidly reconstruct a complete history from fragmented records.
+<section class="ai4ed-content-section">
+  <p class="ai4ed-kicker">Research Directions</p>
+  <h2>AI4ED is organized around two connected workstreams.</h2>
+  <div class="ai4ed-feature-grid ai4ed-feature-grid--split">
+    <article class="ai4ed-feature-card ai4ed-feature-card--accent">
+      <p class="ai4ed-card-tag">Track 01</p>
+      <h3>Chart summarization for emergency medicine</h3>
+      <p>We develop LLM-based summarization workflows that help emergency clinicians review complex patient histories more efficiently, with an emphasis on clinical usefulness, readability, and human oversight.</p>
+    </article>
+    <article class="ai4ed-feature-card ai4ed-feature-card--accent">
+      <p class="ai4ed-card-tag">Track 02</p>
+      <h3>Agentic emergency department simulation</h3>
+      <p>We build workflow simulators that make it possible to test interventions, study bottlenecks, and evaluate operational ideas before they are introduced into practice.</p>
+    </article>
+  </div>
+</section>
 
-To tackle these challenges, we are leveraging large language models to:
+<section class="ai4ed-content-section">
+  <p class="ai4ed-kicker">Interdisciplinary Structure</p>
+  <h2>The project is intentionally cross-functional.</h2>
+  <p>AI4ED brings together emergency medicine physicians, nurses, software engineers, machine learning researchers, data scientists, social scientists, and students. That mix helps the project stay technically strong, clinically grounded, and aligned with real-world implementation constraints.</p>
+</section>
 
-- Improve chart summarization so clinicians can reach a clear picture faster and with less effort.
-- Develop agent-based simulations that explore and optimize ED workflows before changes happen on the floor.
-
-We expect these LLM-powered tools to unlock timelier, more accurate diagnoses, lessen provider burnout, and ultimately deliver better outcomes for patients depending on emergency care.
-
-**Team Composition.** Our interdisciplinary team brings together expertise from a variety of fields, including:
-
-- Emergency medicine physicians and nurses
-- Social workers
-- Software engineers
-- Machine learning researchers
-- Data scientists
-- Social scientists
-- ED patients
-
-This diverse team ensures that our research stays technically sound, ethically grounded, and aligned with the real-world needs of both patients and healthcare providers.
-
-## Installing and Demo the AI4ED project
-
-### A Step-by-Step Guide
-
-We provide the AI4ED simulation project through our GitHub repository. You can download or clone the code there and follow the step-by-step installation and demo instructions to initialize the Simulated ED environment.
-
-[Get Started on GitHub](https://github.com/denoslab/EDSim){: .button target="_blank" rel="noopener noreferrer" }
+<div class="ai4ed-callout ai4ed-callout--cta">
+  <p class="ai4ed-kicker">Repository Access</p>
+  <h2>Download or clone the AI4ED simulation repository.</h2>
+  <p>The GitHub repository contains the simulation codebase, setup instructions, and demo guidance needed to initialize the AI4ED environment locally.</p>
+  <p class="t20"><a class="button radius" href="https://github.com/denoslab/EDSim" target="_blank" rel="noopener noreferrer">Open the GitHub Repository</a></p>
+</div>
