@@ -4,19 +4,169 @@ $('audio,video').mediaelementplayer();
 </script>
 {% endif %}
 
-
 <script src="{{ site.url }}{{ site.baseurl }}/assets/js/javascript.min.js"></script>
 
-
-{% if page.header.image_fullwidth %}
+{% if page.header.image_fullwidth and page.header.image_fullwidth != 'visuals/header_ai4ed_signal.svg' %}
 <script>
     $("#masthead").backstretch("{{ site.urlimg }}{{ page.header.image_fullwidth }}", {fade: 700});
     $("#masthead-with-text").backstretch("{{ site.urlimg }}{{ page.header.image_fullwidth }}", {fade: 700});
 </script>
 {% endif %}
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var nav = document.querySelector('.ai4ed-site-nav');
+  if (!nav) {
+    return;
+  }
 
+  var toggle = nav.querySelector('.ai4ed-site-nav__toggle');
+  var menu = nav.querySelector('.ai4ed-site-nav__menu');
+  if (!toggle || !menu) {
+    return;
+  }
 
+  function isDesktop() {
+    return window.matchMedia('(min-width: 64.0625em)').matches;
+  }
+
+  function closeMenu() {
+    toggle.setAttribute('aria-expanded', 'false');
+    menu.classList.remove('is-open');
+  }
+
+  function syncMenu() {
+    if (isDesktop()) {
+      menu.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  toggle.addEventListener('click', function () {
+    var expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+    menu.classList.toggle('is-open', !expanded);
+  });
+
+  menu.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (!isDesktop()) {
+        closeMenu();
+      }
+    });
+  });
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+      closeMenu();
+      toggle.focus();
+    }
+  });
+
+  window.addEventListener('resize', syncMenu);
+  syncMenu();
+
+  document.querySelectorAll('[data-carousel]').forEach(function (carousel) {
+    var slides = carousel.querySelectorAll('.news-entry__carousel-slide');
+    var prev = carousel.querySelector('.news-entry__carousel-button--prev');
+    var next = carousel.querySelector('.news-entry__carousel-button--next');
+    var index = 0;
+
+    if (!slides.length || !prev || !next) {
+      return;
+    }
+
+    function render() {
+      slides.forEach(function (slide, slideIndex) {
+        slide.classList.toggle('is-active', slideIndex === index);
+      });
+    }
+
+    prev.addEventListener('click', function () {
+      index = (index - 1 + slides.length) % slides.length;
+      render();
+    });
+
+    next.addEventListener('click', function () {
+      index = (index + 1) % slides.length;
+      render();
+    });
+
+    carousel.addEventListener('keydown', function (event) {
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        prev.click();
+      }
+
+      if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        next.click();
+      }
+    });
+
+    render();
+  });
+
+  var lightboxTriggers = document.querySelectorAll('[data-lightbox-src]');
+  if (lightboxTriggers.length) {
+    var lightbox = document.createElement('div');
+    lightbox.className = 'ai4ed-lightbox';
+    lightbox.hidden = true;
+    lightbox.innerHTML = [
+      '<div class="ai4ed-lightbox__dialog" role="dialog" aria-modal="true" aria-label="Expanded poster image">',
+      '<button class="ai4ed-lightbox__close" type="button" aria-label="Close expanded poster">&times;</button>',
+      '<img class="ai4ed-lightbox__image" alt="">',
+      '</div>'
+    ].join('');
+    document.body.appendChild(lightbox);
+
+    var lightboxImage = lightbox.querySelector('.ai4ed-lightbox__image');
+    var lightboxClose = lightbox.querySelector('.ai4ed-lightbox__close');
+    var activeTrigger = null;
+
+    function openLightbox(trigger) {
+      activeTrigger = trigger;
+      lightboxImage.src = trigger.getAttribute('data-lightbox-src');
+      lightboxImage.alt = trigger.getAttribute('data-lightbox-alt') || '';
+      lightbox.hidden = false;
+      document.body.classList.add('ai4ed-lightbox-open');
+      lightboxClose.focus();
+    }
+
+    function closeLightbox() {
+      if (lightbox.hidden) {
+        return;
+      }
+
+      lightbox.hidden = true;
+      lightboxImage.src = '';
+      document.body.classList.remove('ai4ed-lightbox-open');
+      if (activeTrigger) {
+        activeTrigger.focus();
+      }
+      activeTrigger = null;
+    }
+
+    lightboxTriggers.forEach(function (trigger) {
+      trigger.addEventListener('click', function () {
+        openLightbox(trigger);
+      });
+    });
+
+    lightbox.addEventListener('click', function (event) {
+      if (event.target === lightbox || event.target === lightboxClose) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        closeLightbox();
+      }
+    });
+  }
+});
+</script>
 
 
 {% comment %}
@@ -38,4 +188,3 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 {% endif %}
-

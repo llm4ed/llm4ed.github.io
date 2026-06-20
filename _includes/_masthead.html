@@ -1,11 +1,15 @@
-{% if page.header == NULL and page.header.image_fullwidth == NULL and page.header.pattern == NULL and page.header.background-color == NULL and page.header.title == NULL %}
+{% if page.homepage == true %}
 
-<div id="masthead-no-image-header">
+{% if page.breadcrumb == true %}
+{% include _breadcrumb.html %}
+{% endif %}
+
+{% elsif page.header == NULL and page.header.image_fullwidth == NULL and page.header.pattern == NULL and page.header.background-color == NULL and page.header.title == NULL %}
+
+<div id="masthead-no-image-header" class="ai4ed-masthead-band">
 	<div class="row">
 		<div class="small-12 columns">
-			<a id="logo" href="{{ '/' | absolute_url }}" title="{{ site.title }} – {{ site.slogan }}">
-				<img src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ site.logo }}" alt="{{ site.title }} – {{ site.slogan }}">
-			</a>
+			<div class="ai4ed-masthead-band__inner"></div>
 		</div><!-- /.small-12.columns -->
 	</div><!-- /.row -->
 </div><!-- /#masthead -->
@@ -13,10 +17,6 @@
 {% if page.breadcrumb == true %}
 {% include _breadcrumb.html %}
 {% endif %}
-
-
-
-
 
 {% elsif page.header.title %}
 
@@ -42,18 +42,12 @@
 </div>
 {% endif %}
 
-
-
-
-
 {% elsif page.header.image_fullwidth %}
 
-<div id="masthead">
+<div id="masthead" class="ai4ed-masthead-band">
 	<div class="row">
 		<div class="small-12 columns">
-			<a id="logo" href="{{ '/' | absolute_url }}" title="{{ site.title }} – {{ site.slogan }}">
-				<img src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ site.logo }}" alt="{{ site.title }} – {{ site.slogan }}">
-			</a>
+			<div class="ai4ed-masthead-band__inner"></div>
 		</div><!-- /.small-12.columns -->
 	</div><!-- /.row -->
 </div><!-- /#masthead -->
@@ -71,10 +65,6 @@
 	{{ page.header.caption }}
 </div>
 {% endif %}
-
-
-
-
 
 {% elsif page.header.pattern %}
 
@@ -100,10 +90,6 @@
 </div>
 {% endif %}
 
-
-
-
-
 {% elsif page.header.background-color %}
 
 <div id="masthead-with-background-color" style="background: {{ page.header.background-color }};">
@@ -127,10 +113,6 @@
 	{{ page.header.caption }}
 </div>
 {% endif %}
-
-
-
-
 
 {% elsif page.header == false %}
 

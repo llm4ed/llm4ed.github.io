@@ -11,10 +11,10 @@
 title: 'AI4ED'
 
 # The slogan describes your website and is used on homepage in <title> and other important places
-slogan: 'LLM For ED'
+slogan: 'AI for Emergency Department Workflows'
 
 # The description is used on homepage and in the footer to quickly describe your website. Use a maximum of 150 characters for SEO-purposes.
-description: 'Our transdisciplinary research initiative focuses on improving Emergency Department (ED) workflows using cutting-edge Large Language Models (LLMs). Our goal is to develop innovative solutions to reduce wait times, alleviate staff burnout, and enhance overall patient care in the ED.'
+description: 'AI4ED is an interdisciplinary research initiative building clinically grounded AI systems for emergency department chart summarization and workflow simulation.'
 
 # The credits show up in the includes/_footer.html – It would be nice of you to leave a link to Phlow or Feeling Responsive as a thank you :)
 credits: '© 2024 AI in Emergency Departments Research Initiative. All rights reserved.'
@@ -42,7 +42,7 @@ urlimg: 'https://ai4ed.ca/images/'
 
 
 # Logo size is 600x80 pixels
-logo: "logo.png"
+logo: "ai4ed-logo-clean.png"
 
 # Plugins
 plugins:

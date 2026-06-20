@@ -1,0 +1,23 @@
+<svg width="560" height="88" viewBox="0 0 560 88" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">AI4ED logo</title>
+  <desc id="logoDesc">AI4ED wordmark with a custom research signal mark.</desc>
+  <defs>
+    <linearGradient id="ai4edLogoStroke" x1="12" y1="10" x2="76" y2="78" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4EDBE4"/>
+      <stop offset="0.52" stop-color="#6C88FF"/>
+      <stop offset="1" stop-color="#113C68"/>
+    </linearGradient>
+    <linearGradient id="ai4edLogoFill" x1="14" y1="12" x2="74" y2="76" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FCFF"/>
+      <stop offset="1" stop-color="#E8F2FB"/>
+    </linearGradient>
+  </defs>
+  <rect x="10" y="8" width="68" height="68" rx="22" fill="url(#ai4edLogoFill)" stroke="url(#ai4edLogoStroke)" stroke-width="3"/>
+  <path d="M27 52C34.5 40.5 41.5 35 49 35C56 35 61 40 61 47.5C61 54.5 56 60 48.5 60C41.5 60 36.5 55.5 34 48" stroke="#0E2A47" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="26" cy="54" r="5.5" fill="#4EDBE4"/>
+  <circle cx="60.5" cy="29.5" r="5.5" fill="#6C88FF"/>
+  <path d="M45 21V31" stroke="#0E2A47" stroke-width="4" stroke-linecap="round"/>
+  <path d="M40 26H50" stroke="#0E2A47" stroke-width="4" stroke-linecap="round"/>
+  <text x="97" y="46" fill="#081B34" font-family="Sora, IBM Plex Sans, Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="-0.03em">AI4ED</text>
+  <text x="97" y="68" fill="#426283" font-family="IBM Plex Sans, Arial, sans-serif" font-size="13" font-weight="500" letter-spacing="0.16em">EMERGENCY DEPARTMENT INTELLIGENCE</text>
+</svg>

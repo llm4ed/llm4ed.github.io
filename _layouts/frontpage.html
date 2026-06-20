@@ -2,95 +2,148 @@
 layout: default
 format: frontpage
 ---
-<div id="header-home">
-    <div class="row t30 b20 homepage">
-        <div class="small-12 columns">
-            <p>
-                <img width="970" src="{{ '/images/Ed_RoadMap-home.jpg' | relative_url }}" alt="Emergency Department LLM roadmap">
-            </p>
-            <p class="text-right caption">RoadMap for LLM application in Emergency Department</p>
-        </div><!-- /.small-12.columns -->
-    </div><!-- /.row -->
 
+<div id="header-home" class="ai4ed-home-hero-shell">
+  <div class="row">
+    <div class="small-12 columns">
+      <section class="ai4ed-home-hero">
+        <div class="ai4ed-home-hero__copy">
+          <div class="ai4ed-home-hero__logo-lockup">
+            <img class="ai4ed-home-hero__logo" src="{{ '/assets/img/ai4ed-logo-clean.png' | relative_url }}" alt="AI4ED logo">
+          </div>
 
-    <div class="row">
-        <div class="small-12 columns">
-        </div><!-- /.medium-4.columns -->
-    </div><!-- /.row -->
-</div><!-- /#header-home -->
+          {% if page.hero.eyebrow %}<p class="ai4ed-home-hero__eyebrow">{{ page.hero.eyebrow }}</p>{% endif %}
+          {% if page.hero.title %}<h1 class="ai4ed-home-hero__title">{{ page.hero.title }}</h1>{% endif %}
+          {% if page.hero.subtitle %}<p class="ai4ed-home-hero__lead">{{ page.hero.subtitle }}</p>{% endif %}
+          {% if page.hero.context %}<p class="ai4ed-home-hero__context">{{ page.hero.context }}</p>{% endif %}
 
-
-{% comment %}
-*
-* First check, if widget is empty or not by checking if there is a title
-*
-{% endcomment %}
-<div class="row t60">
-	{% if page.widget1.image or page.widget1.video or page.widget1.title %}
-		{% include _frontpage-widget.html widget=page.widget1 %}
-	{% endif %}
-
-	{% if page.widget2.image or page.widget2.video or page.widget2.title %}
-		{% include _frontpage-widget.html widget=page.widget2 %}
-	{% endif %}
-
-	{% if page.widget3.image or page.widget3.video or page.widget3.title %}
-		{% include _frontpage-widget.html widget=page.widget3 %}
-	{% endif %}
-</div><!-- /.row -->
-
-
-
-{% comment %}
-*
-* First check, if there is a call for action-button
-*
-{% endcomment %}
-{% if page.callforaction.url contains 'http' %}
-{% assign url = '' %}
-{% else %}
-{% capture url %}{{ site.url }}{{ site.baseurl }}{% endcapture %}
-{% endif %}
-{% if page.callforaction %}
-    <div class="row t60 b60">
-        <div class="small-12 text-center columns">
-            <a class="button large radius {{ page.callforaction.style }}" href="{{ url }}{{ page.callforaction.url }}"{% if page.callforaction.url contains 'http' %} target="_blank" {% endif %}>{{ page.callforaction.text }}</a>
-        </div><!-- /.small-12.columns -->
-    </div><!-- /.row -->
-{% endif %}
-
-
-
-    <div class="row">
-        <div class="medium-6 columns">
-            <h2><a href="https://demo.ai4ed.ca/" target="_blank">Emergency Department Workflow Simulation</a></h2>
-            <p>
-                Explore how aligned large language model agents coordinate triage, assessment, and disposition decisions in our virtual emergency department. 
-                <a href="https://demo.ai4ed.ca/" target="_blank"><strong>Launch the demo</strong></a>
-            </p>
-        </div><!-- /.medium-5.columns -->
-
-
-        <div class="medium-6 columns">
-            <p><strong>Recent Publications</strong></p>
-            {% for paper in site.data.publications %}
-            <div class="t15">
-                <p class="publication-title"><a href="{{ paper.url }}">{{ paper.title }}</a></p>
-                <p class="small">{{ paper.venue }} – {{ paper.status }}</p>
-                <p class="small">{{ paper.summary }}</p>
-            </div>
+          {% if page.hero.tags %}
+          <div class="ai4ed-home-hero__chips">
+            {% for tag in page.hero.tags %}
+            <span class="ai4ed-signal-chip">{{ tag }}</span>
             {% endfor %}
-            <p class="t20"><a class="button tiny radius" href="{{ '/publications/' | relative_url }}">View all publications</a></p>
-        </div><!-- /.medium-7.columns -->
-    </div><!-- /.row -->
+          </div>
+          {% endif %}
 
+          <div class="ai4ed-home-hero__actions">
+            {% if page.hero.primary_url and page.hero.primary_text %}
+            <a class="button radius" href="{% if page.hero.primary_url contains 'http' %}{{ page.hero.primary_url }}{% else %}{{ page.hero.primary_url | relative_url }}{% endif %}"{% if page.hero.primary_url contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ page.hero.primary_text }}</a>
+            {% endif %}
+            {% if page.hero.secondary_url and page.hero.secondary_text %}
+            <a class="button radius button--ghost" href="{% if page.hero.secondary_url contains 'http' %}{{ page.hero.secondary_url }}{% else %}{{ page.hero.secondary_url | relative_url }}{% endif %}"{% if page.hero.secondary_url contains 'http' %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ page.hero.secondary_text }}</a>
+            {% endif %}
+          </div>
+        </div>
 
-{% comment %}
-*
-* Finally, if there is content, spit it out.
-*
-{% endcomment %}
+        <div class="ai4ed-home-hero__media">
+          {% if page.hero.photo %}
+          <figure class="ai4ed-home-hero__photo">
+            <img src="{{ page.hero.photo | relative_url }}" alt="{{ page.hero.photo_alt | default: page.hero.title | escape }}">
+          </figure>
+          {% endif %}
 
-<div class="row">
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+{% if page.hero.trust_items %}
+<div class="row ai4ed-home-trust-row">
+  <div class="small-12 columns">
+    <div class="ai4ed-home-trust-grid">
+      {% for item in page.hero.trust_items %}
+      <article class="ai4ed-home-trust-card">
+        <h2>{{ item.title }}</h2>
+        <p>{{ item.text }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<div class="row ai4ed-home-section-header">
+  <div class="small-12 columns">
+    <div class="ai4ed-home-section-heading">
+      <h2>Explore the project</h2>
+      <p>Use the site to move from clinical context and repository setup into people, outputs, and current public-facing activity.</p>
+    </div>
+  </div>
+</div>
+
+<div class="row ai4ed-widget-row">
+  {% if page.widget1.image or page.widget1.video or page.widget1.title %}
+    {% include _frontpage-widget.html widget=page.widget1 %}
+  {% endif %}
+  {% if page.widget2.image or page.widget2.video or page.widget2.title %}
+    {% include _frontpage-widget.html widget=page.widget2 %}
+  {% endif %}
+  {% if page.widget3.image or page.widget3.video or page.widget3.title %}
+    {% include _frontpage-widget.html widget=page.widget3 %}
+  {% endif %}
+</div>
+
+<section class="row ai4ed-home-output-section">
+  <div class="small-12 columns">
+    <div class="ai4ed-home-section-heading">
+      <h2>Current outputs</h2>
+      <p>The project is already visible through a working simulation demo, publication activity, and stakeholder-facing research events.</p>
+    </div>
+
+    <div class="ai4ed-output-board">
+      <article class="ai4ed-output-card ai4ed-output-card--demo">
+        <p class="ai4ed-output-card__label">Interactive Demo</p>
+        <h2><a href="https://demo.ai4ed.ca/" target="_blank" rel="noopener noreferrer">Emergency Department Workflow Simulation</a></h2>
+        <p>Explore how aligned language-model agents coordinate triage, assessment, and disposition decisions inside a usable emergency department simulation environment.</p>
+        <p class="ai4ed-output-card__actions"><a class="button radius" href="https://demo.ai4ed.ca/" target="_blank" rel="noopener noreferrer">Launch Demo</a></p>
+      </article>
+
+      <div class="ai4ed-output-board__secondary">
+        <article class="ai4ed-output-card ai4ed-output-card--publications">
+          <p class="ai4ed-output-card__label">Recent Publication</p>
+          {% for paper in site.data.publications limit:1 %}
+          <div class="ai4ed-publication-preview__item">
+            <h3><a href="{{ paper.url }}" target="_blank" rel="noopener noreferrer">{{ paper.title }}</a></h3>
+            <p class="ai4ed-publication-preview__meta">{{ paper.venue }} · {{ paper.status }}</p>
+            <p>{{ paper.summary }}</p>
+          </div>
+          {% endfor %}
+          <p class="ai4ed-output-card__actions"><a class="button tiny radius button--ghost" href="{{ '/publications/' | relative_url }}">Read publications</a></p>
+        </article>
+
+        <article class="ai4ed-output-card ai4ed-output-card--activity">
+          <div class="ai4ed-output-card__activity-copy">
+            <p class="ai4ed-output-card__label">Recent Activity</p>
+            {% if page.activity_spotlight.date %}<p class="ai4ed-output-card__meta">{{ page.activity_spotlight.date }}</p>{% endif %}
+            <h3><a href="{{ '/news/' | relative_url }}">{{ page.activity_spotlight.title }}</a></h3>
+            <p>{{ page.activity_spotlight.summary }}</p>
+            <p class="ai4ed-output-card__actions"><a class="button tiny radius button--ghost" href="{{ '/news/' | relative_url }}">View activities</a></p>
+          </div>
+          {% if page.activity_spotlight.image %}
+          <figure class="ai4ed-activity-spotlight__media">
+            <img src="{{ page.activity_spotlight.image | relative_url }}" alt="{{ page.activity_spotlight.image_alt | default: page.activity_spotlight.title | escape }}">
+          </figure>
+          {% endif %}
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="row ai4ed-roadmap-section">
+  <div class="small-12 columns">
+    <div class="ai4ed-surface ai4ed-surface--roadmap">
+      <p class="ai4ed-output-card__label">Project Roadmap</p>
+      <h2 class="ai4ed-roadmap-title">Roadmap for LLM applications in the emergency department</h2>
+      <p class="ai4ed-roadmap-lead">A high-level view of how capstone work, summer development, funding support, and publication goals connect across the current AI4ED program.</p>
+      <img class="ai4ed-roadmap-image" src="{{ '/images/Ed_RoadMap-home.jpg' | relative_url }}" alt="Emergency Department LLM roadmap">
+    </div>
+  </div>
+</div>
+
+<div class="row ai4ed-homepage-content">
+  <div class="small-12 columns">
     {{ content }}
-</div><!-- /.row -->
+  </div>
+</div>

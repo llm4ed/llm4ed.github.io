@@ -1,12 +1,12 @@
-- title: Overview
+- title: Home
   url: "/"
   side: left
 
-- title: "Overview & Setup"
+- title: "Getting Started"
   url: "/background/"
   side: left
 
-- title: "Teams"
+- title: Team
   url: "/team/"
   side: left
 
@@ -17,16 +17,11 @@
 - title: News
   url: "/news/"
   side: left
-  dropdown:
-
-- title: Newsletter
-  url: "/newsletter/"
-  side: left
 
 - title: Questionnaire
-  url: "/event/"
+  url: "/questionnaire/"
   side: left
 
-- title: "Contact"
+- title: Contact
   url: "/contact/"
   side: right
