@@ -13,18 +13,43 @@ header:
 </div>
 
 <div class="news-feed">
-  <article class="news-entry news-entry--newsletter">
-    <p class="news-entry__date">Quarterly Newsletter</p>
-    <h2>LLM4ED Quarterly Newsletter</h2>
-    <p>Our quarterly newsletter brings together recent publications, demonstrations, team activities, and research progress across AI4ED. It is the fastest way to get a concise, high-level view of what the project has been building and sharing.</p>
-    <p class="news-entry__actions"><a class="button radius" href="{{ '/newsletter/' | relative_url }}">View Newsletter</a></p>
+  <article class="news-entry news-entry--spotlight">
+    <p class="news-entry__date">May 12–13, 2026</p>
+    <h2>Banff Retreat Event</h2>
+    <p>Hosted by Dr. Steve Drew and co-hosted by Dr. Jessalyn Kathryn Holodinsky, the AI4ED Banff retreat created space to step back from day-to-day project work and focus on where clinically grounded AI can be most useful in emergency care. Sessions covered both the practical and the still-emerging: bedside decision support, chart summarization that can give physicians back some of their time, and care pathways designed more closely around patients. The conversation consistently balanced opportunity with caution, keeping implementation quality and real clinical fit at the center.</p>
+    <p>The room brought together researchers from the Cumming School of Medicine, the Schulich School of Engineering, and the Haskayne School of Business at the University of Calgary, alongside Emergency Care Alberta, emergency physicians, health-system administrators, and patient partners. That cross-disciplinary exchange was the point of the event, and it worked: new collaborations and research directions are already taking shape. We are grateful to the Schulich Momentum Fund for making the retreat possible and to everyone who contributed their time, perspective, and practical insight.</p>
+    <div class="news-entry__carousel" data-carousel tabindex="0" aria-label="Banff retreat event photo carousel">
+      <button class="news-entry__carousel-button news-entry__carousel-button--prev" type="button" aria-label="Show previous photo">&#8249;</button>
+      <div class="news-entry__carousel-stage">
+        <figure class="news-entry__carousel-slide is-active">
+          <img src="{{ '/images/Activities/ai4ed-banff-retreat-2026-05-12-1-1600.jpg' | relative_url }}" alt="Participants gathered during the AI4ED Banff Retreat Event">
+        </figure>
+        <figure class="news-entry__carousel-slide">
+          <img src="{{ '/images/Activities/ai4ed-banff-retreat-2026-05-12-2-1600.jpg' | relative_url }}" alt="Discussion during the AI4ED Banff Retreat Event">
+        </figure>
+        <figure class="news-entry__carousel-slide">
+          <img src="{{ '/images/Activities/ai4ed-banff-retreat-2026-05-13-1-1600.jpg' | relative_url }}" alt="Participants engaged in the AI4ED Banff Retreat Event">
+        </figure>
+        <figure class="news-entry__carousel-slide">
+          <img src="{{ '/images/Activities/ai4ed-banff-retreat-2026-05-13-2-1600.jpg' | relative_url }}" alt="Banff retreat session participants in conversation">
+        </figure>
+      </div>
+      <button class="news-entry__carousel-button news-entry__carousel-button--next" type="button" aria-label="Show next photo">&#8250;</button>
+    </div>
   </article>
 
-  <article class="news-entry news-entry--featured news-entry--capstone-2026">
+  <article class="news-entry">
+    <p class="news-entry__date">Quarterly Newsletter</p>
+    <h2>LLM4ED Quarterly Newsletter</h2>
+    <p>Our quarterly newsletter brings together recent publications, demonstrations, team activities, and research progress across AI4ED. It offers a concise project snapshot without requiring a full site tour.</p>
+    <p class="news-entry__actions"><a class="button radius button--ghost" href="{{ '/newsletter/' | relative_url }}">View Newsletter</a></p>
+  </article>
+
+  <article class="news-entry">
     <p class="news-entry__date">April 1, 2026</p>
     <h2>2026 Schulich Engineering Capstone Fair</h2>
     <p>It was exciting to see the capstone team, led by Hutton Ledingham, present EDSim at the 2026 Schulich Engineering Capstone Fair. What began as an early prototype has matured into a more substantial interdisciplinary research effort, capable of producing promising initial results and offering meaningful insight into Canadian emergency department workflows. The team represented the project exceptionally well and communicated both the technical depth of the simulator and its broader research potential.</p>
-    <div class="news-entry__carousel" data-carousel>
+    <div class="news-entry__carousel" data-carousel tabindex="0" aria-label="2026 capstone fair photo carousel">
       <button class="news-entry__carousel-button news-entry__carousel-button--prev" type="button" aria-label="Show previous photo">&#8249;</button>
       <div class="news-entry__carousel-stage">
         <figure class="news-entry__carousel-slide is-active">
@@ -42,7 +67,7 @@ header:
     <p class="news-entry__date">March 16, 2026</p>
     <h2>AI4ED Team Retreat Lunch</h2>
     <p>Our team gathered for a retreat lunch to reconnect across workstreams, reflect on recent progress, and discuss upcoming priorities for AI4ED research, development, and dissemination.</p>
-    <div class="news-entry__carousel" data-carousel>
+    <div class="news-entry__carousel" data-carousel tabindex="0" aria-label="AI4ED team retreat lunch photo carousel">
       <button class="news-entry__carousel-button news-entry__carousel-button--prev" type="button" aria-label="Show previous photo">&#8249;</button>
       <div class="news-entry__carousel-stage">
         <figure class="news-entry__carousel-slide is-active">
@@ -93,8 +118,10 @@ header:
     <p class="news-entry__date">April 1, 2025</p>
     <h2>2025 Schulich Engineering Capstone Fair</h2>
     <p>Alexander Burn and Samuel Wang developed the first prototype of EDSim and presented it at the 2025 Schulich Engineering Capstone Fair. Their capstone work established the initial foundation of the project and showed how an agent-based emergency department simulator could be used to explore workflow challenges in a realistic and engaging way. The presentation was received strongly, and the project was later recognized with a bronze award.</p>
-    <figure>
-      <img src="{{ '/images/Activities/ai4ed-capstone-fair-2025-04-01-1200.jpg' | relative_url }}" alt="AI4ED team at the 2025 Schulich Engineering Capstone Fair">
+    <figure class="news-entry__poster">
+      <button class="news-entry__zoom-trigger" type="button" data-lightbox-src="{{ '/images/Activities/ai4ed-capstone-fair-2025-04-01-1200.jpg' | relative_url }}" data-lightbox-alt="AI4ED team at the 2025 Schulich Engineering Capstone Fair" aria-label="Open 2025 capstone fair photo full size">
+        <img src="{{ '/images/Activities/ai4ed-capstone-fair-2025-04-01-1200.jpg' | relative_url }}" alt="AI4ED team at the 2025 Schulich Engineering Capstone Fair">
+      </button>
     </figure>
   </article>
 </div>

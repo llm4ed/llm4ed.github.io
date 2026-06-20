@@ -27,7 +27,7 @@
       <div class="small-6 medium-4 large-3 columns">
         <h5 class="shadow-black">Contact</h5>
         <p class="shadow-black"><a href="mailto:info@ai4ed.ca">info@ai4ed.ca</a></p>
-        <p class="shadow-black">Supported by <a href="https://schulich.ucalgary.ca/about/schulich-momentum" target="_blank" rel="noopener noreferrer">Schulich Momentum</a>.</p>
+        <p class="shadow-black">Supported by <a href="https://schulich.ucalgary.ca/about/schulich-momentum" target="_blank" rel="noopener noreferrer">Schulich Momentum Fund</a>.</p>
       </div>
     </div>
   </div>
@@ -41,7 +41,7 @@
       <section id="subfooter-right" class="small-12 medium-6 columns">
         <ul class="inline-list social-icons">
         {% for social_item in site.data.socialmedia %}
-          <li><a href="{{ social_item.url }}" target="_blank" class="{{ social_item.class }}" title="{{ social_item.title }}"></a></li>
+          <li><a href="{{ social_item.url }}" target="_blank" rel="noopener noreferrer" class="{{ social_item.class }}" title="{{ social_item.title }}" aria-label="{{ social_item.title }}"></a></li>
         {% endfor %}
         </ul>
       </section>

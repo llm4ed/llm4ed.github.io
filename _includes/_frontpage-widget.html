@@ -26,20 +26,26 @@
   {% assign widget_is_external = true %}
 {% endif %}
 
-<div class="medium-4 columns frontpage-widget">
+<article class="frontpage-widget">
+  {% if widget_url_clean != empty %}
+  <a class="frontpage-widget__card" href="{{ widget_url_clean }}"{% if widget_is_external %} target="_blank" rel="noopener noreferrer"{% endif %}>
+  {% else %}
   <div class="frontpage-widget__card">
-    <div class="frontpage-widget__media{% if include.widget.image == 'DenosLab.jpg' %} frontpage-widget__media--contain{% endif %}">
-      {% if include.widget.video %}
-        {{ include.widget.video }}
-      {% elsif widget_image_clean != empty %}
-        <img src="{{ widget_image_clean }}" alt="{{ include.widget.image_alt | default: include.widget.title | escape }}" />
-      {% endif %}
-    </div>
+  {% endif %}
+    {% if widget_image_clean != empty %}
+    <span class="frontpage-widget__media" aria-hidden="true">
+      <img src="{{ widget_image_clean }}" alt="" />
+    </span>
+    {% endif %}
 
-    <div class="frontpage-widget__content">
-      <h2 class="font-size-h3 t10">{{ include.widget.title }}</h2>
-      {% if include.widget.text != empty %}<p class="frontpage-widget__summary">{{ include.widget.text }}</p>{% endif %}
-      {% if widget_url_clean != empty %}<p class="frontpage-widget__action"><a class="button tiny radius" href="{{ widget_url_clean }}"{% if widget_is_external %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ include.widget.button_text | default: 'Explore' }}</a></p>{% endif %}
-    </div>
+    <span class="frontpage-widget__content">
+      <span class="frontpage-widget__title">{{ include.widget.title }}</span>
+      {% if include.widget.text != empty %}<span class="frontpage-widget__summary">{{ include.widget.text }}</span>{% endif %}
+      {% if widget_url_clean != empty %}<span class="frontpage-widget__cta">{{ include.widget.button_text | default: 'Explore' }} <span aria-hidden="true">→</span></span>{% endif %}
+    </span>
+  {% if widget_url_clean != empty %}
+  </a>
+  {% else %}
   </div>
-</div>
+  {% endif %}
+</article>

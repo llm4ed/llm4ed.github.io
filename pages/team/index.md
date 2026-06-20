@@ -9,10 +9,10 @@ header:
 ---
 
 <div class="ai4ed-section-intro">
-  <p>Our team is organized into four groups: <strong>Project Leads</strong>, <strong>Researchers</strong>, <strong>Clinicians</strong>, and <strong>Students</strong>. Together, these collaborators shape the scientific direction, technical implementation, and real-world relevance of the AI4ED project.</p>
+  <p>Our team is organized into four groups: <strong>Project Leads</strong>, <strong>Researchers</strong>, <strong>Clinicians</strong>, and <strong>Students</strong>. That structure keeps the work technically rigorous, clinically grounded, and connected to real emergency department needs.</p>
 </div>
 
-<section class="team-section team-section--featured">
+<section class="team-section">
   <h2>Project Leads</h2>
   <div class="team-grid">
     <article class="team-card">
@@ -31,9 +31,6 @@ header:
 
 <section class="team-section">
   <h2>Researchers</h2>
-  <div class="team-section__note">
-    <p>Project leads <a href="https://profiles.ucalgary.ca/steve-drew" target="_blank" rel="noopener noreferrer">Steve Drew</a> and <a href="https://profiles.ucalgary.ca/jessalyn-holodinsky" target="_blank" rel="noopener noreferrer">Jessalyn Kathryn Holodinsky</a> also contribute to this research group.</p>
-  </div>
   <div class="team-grid">
     <article class="team-card">
       <h3><a href="https://jiayuzhou.github.io/" target="_blank" rel="noopener noreferrer">Jiayu Zhou</a></h3>
@@ -43,25 +40,25 @@ header:
 
     <article class="team-card">
       <h3><a href="https://profiles.ucalgary.ca/zack-marshall" target="_blank" rel="noopener noreferrer">Zack Marshall</a></h3>
-      <p class="team-card__role">Associate Professor, Department of Community Health Sciences, University of Calgary</p>
+      <p class="team-card__role">Associate Professor</p>
       <p><span class="team-card__label">Research Focus</span>2SLGBTQ+ health equity, harm reduction, and participatory research.</p>
     </article>
 
     <article class="team-card">
       <h3><a href="https://cumming.ucalgary.ca/departments/emergency-medicine/profiles/eddy-lang" target="_blank" rel="noopener noreferrer">Eddy Lang</a></h3>
-      <p class="team-card__role">Academic &amp; Clinical Department Head, Department of Emergency Medicine, Cumming School of Medicine, University of Calgary &amp; Alberta Health Services</p>
+      <p class="team-card__role">Department Head, Emergency Medicine</p>
       <p><span class="team-card__label">Research Focus</span>Knowledge translation, evidence-based medicine, and health services research.</p>
     </article>
 
     <article class="team-card">
       <h3><a href="https://profiles.ucalgary.ca/tracie-risling" target="_blank" rel="noopener noreferrer">Tracie Risling</a></h3>
-      <p class="team-card__role">Associate Dean, Innovation &amp; Research, Faculty of Nursing, University of Calgary</p>
+      <p class="team-card__role">Associate Dean, Innovation &amp; Research</p>
       <p><span class="team-card__label">Research Focus</span>Nursing informatics, digital health, co-design, social media, and workforce support.</p>
     </article>
 
     <article class="team-card">
       <h3><a href="https://profiles.ucalgary.ca/tanvir-chowdhury" target="_blank" rel="noopener noreferrer">Tanvir Turin Chowdhury</a></h3>
-      <p class="team-card__role">Associate Professor, Department of Family Medicine</p>
+      <p class="team-card__role">Associate Professor, Family Medicine</p>
       <p><span class="team-card__label">Research Focus</span>Epidemiology.</p>
     </article>
 
@@ -78,19 +75,19 @@ header:
   <div class="team-grid">
     <article class="team-card">
       <h3><a href="https://cumming.ucalgary.ca/departments/emergency-medicine/profiles/eddy-lang" target="_blank" rel="noopener noreferrer">Eddy Lang</a></h3>
-      <p class="team-card__role">Academic &amp; Clinical Department Head, Department of Emergency Medicine, Cumming School of Medicine, University of Calgary &amp; Alberta Health Services</p>
+      <p class="team-card__role">Department Head, Emergency Medicine</p>
       <p><span class="team-card__label">Clinical Focus</span>Emergency medicine leadership, knowledge translation, and implementation science.</p>
     </article>
 
     <article class="team-card">
       <h3>Braden Teitge</h3>
-      <p class="team-card__role">Emergency Medicine Physician, Calgary Zone, Alberta Health Services</p>
+      <p class="team-card__role">Emergency Medicine Physician</p>
       <p><span class="team-card__label">Clinical Focus</span>Emergency medicine and family medicine (CCFP-EM).</p>
     </article>
 
     <article class="team-card">
       <h3>Riley Martens</h3>
-      <p class="team-card__role">Registered Nurse / Master&apos;s Student, University of Calgary</p>
+      <p class="team-card__role">Registered Nurse / Master&apos;s Student</p>
       <p><span class="team-card__label">Clinical Focus</span>Peer support, young adult cancer survivorship, and social media platforms for peer support in health contexts.</p>
     </article>
   </div>

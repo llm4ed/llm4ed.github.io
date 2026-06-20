@@ -9,21 +9,24 @@ header:
 ---
 
 <div class="ai4ed-section-intro">
-  <p>AI4ED publications document the project across language-model evaluation, chart summarization, and agentic emergency department simulation. Together, they show how clinically grounded AI research can move from benchmarking and prototype development toward operational decision support.</p>
+  <p>AI4ED publications document the project across language-model evaluation, chart summarization, and agentic emergency department simulation. Together, they show how the work is moving from early prototypes and benchmarking toward clinically grounded decision-support research.</p>
 </div>
 
-<div class="publication-list">
+<div class="research-publication-list">
   {% for paper in site.data.publications %}
-    <article class="publication-card publication-card--featured">
-      <p class="publication-card__eyebrow">AI4ED research output</p>
-      <h2 class="publication-card__title"><a href="{{ paper.url }}" target="_blank" rel="noopener noreferrer">{{ paper.title }}</a></h2>
-      <div class="publication-badges">
-        <span class="publication-badge">{{ paper.venue }}</span>
-        <span class="publication-badge publication-badge--status">{{ paper.status }}</span>
-      </div>
-      <p class="publication-card__authors"><strong>Authors:</strong> {{ paper.authors }}</p>
-      <p class="publication-card__summary">{{ paper.summary }}</p>
-      <p class="publication-card__actions"><a class="button tiny radius" href="{{ paper.url }}" target="_blank" rel="noopener noreferrer">Open publication</a></p>
+    <article class="research-publication-card">
+      <header class="research-publication-card__header">
+        <div class="research-publication-card__heading">
+          <h2><a href="{{ paper.url }}" target="_blank" rel="noopener noreferrer">{{ paper.title }}</a></h2>
+          <div class="research-publication-card__meta" aria-label="Publication details">
+            <span>{{ paper.venue }}</span>
+            <span>{{ paper.status }}</span>
+          </div>
+        </div>
+        <a class="research-publication-card__link" href="{{ paper.url }}" target="_blank" rel="noopener noreferrer">Open publication</a>
+      </header>
+      <p class="research-publication-card__authors"><strong>Authors:</strong> {{ paper.authors }}</p>
+      <p class="research-publication-card__summary">{{ paper.summary }}</p>
     </article>
   {% endfor %}
 </div>

@@ -14,19 +14,17 @@ header:
 </div>
 
 <div class="ai4ed-feature-grid ai4ed-feature-grid--split">
-  <article class="ai4ed-feature-card ai4ed-feature-card--accent">
-    <p class="ai4ed-card-tag">General</p>
+  <article class="ai4ed-feature-card">
     <h3>Project inquiries</h3>
     <p>The best way to reach the AI4ED team is by email for questions about the project, website, updates, or collaboration.</p>
     <p class="t20"><a class="button radius" href="mailto:info@ai4ed.ca">Email the AI4ED Team</a></p>
   </article>
   <article class="ai4ed-feature-card">
-    <p class="ai4ed-card-tag">Research</p>
     <h3>Demos and collaboration</h3>
-    <p>If you are interested in the simulation environment, publication outputs, or research discussions, we are happy to connect and share more context.</p>
+    <p>If you are interested in the simulation environment, publication outputs, or a research conversation about the project, we are happy to connect and share more context.</p>
+    <p class="t20"><a class="button radius button--ghost" href="mailto:info@ai4ed.ca?subject=AI4ED%20demo%20or%20collaboration%20request">Request a Demo or Collaboration Chat</a></p>
   </article>
   <article class="ai4ed-feature-card">
-    <p class="ai4ed-card-tag">Start Here</p>
     <h3>Useful pages</h3>
     <ul>
       <li><a href="{{ '/background/' | relative_url }}">Getting Started</a></li>

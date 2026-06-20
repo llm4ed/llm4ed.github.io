@@ -18,15 +18,13 @@ format: page-fullwidth
 <div class="row ai4ed-page-shell t30">
 	<div class="medium-12 columns">
 		<article class="ai4ed-page-panel ai4ed-page-panel--wide">
-			<header>
-				{% if page.subheadline %}<p class="subheadline">{{ page.subheadline }}</p>{% endif %}
+			<header class="ai4ed-page-header">
 				<h1>{{ page.title }}</h1>
+				{% if page.subheadline %}<p class="ai4ed-page-header__meta">{{ page.subheadline }}</p>{% endif %}
 			</header>
 
 			{% if page.teaser %}
-			<p class="teaser">
-				{{ page.teaser }}
-			</p>
+			<p class="teaser ai4ed-page-teaser">{{ page.teaser }}</p>
 			{% endif %}
 
 			{{ content }}

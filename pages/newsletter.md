@@ -12,8 +12,14 @@ header:
   <p>The AI4ED quarterly newsletter brings together project milestones, publication activity, demonstrations, and team highlights in one concise update. It is designed as the fastest way to understand what the project has recently been building and sharing.</p>
 </div>
 
+<div class="ai4ed-callout ai4ed-callout--compact">
+  <h2>Read online or open the PDF directly.</h2>
+  <p>The embedded viewer works well on desktop. On phones and tablets, opening the PDF directly often provides the smoother reading experience.</p>
+</div>
+
 <div class="ai4ed-pdf-viewer">
   <iframe
+    loading="lazy"
     src="{{ '/assets/docs/llm4ed-quarterly-newsletter-q4-2025.pdf#toolbar=1&navpanes=1&scrollbar=1&zoom=page-width' | relative_url }}"
     title="LLM4ED Quarterly Newsletter (Q4 2025)">
   </iframe>
