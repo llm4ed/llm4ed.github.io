@@ -28,7 +28,6 @@ header:
 </div>
 
 <div class="ai4ed-callout ai4ed-callout--cta">
-  <h2>Open the survey directly and begin immediately.</h2>
-  <p>Your responses will help inform the design of an AI-enabled auto-summary tool for emergency department care. If you are eligible to participate, you can begin the survey directly through the link below.</p>
-  <p class="t20"><a class="button radius" href="https://survey.ucalgary.ca/jfe/form/SV_3fyyEGc9G1MiHeS" target="_blank" rel="noopener noreferrer">Open Questionnaire</a></p>
+  <h2>Questionnaire access is still in progress.</h2>
+  <p>The questionnaire is currently available only to approved participants. Public access is not open at this time, and eligible participants will receive access through the project team.</p>
 </div>
