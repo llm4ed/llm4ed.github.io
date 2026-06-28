@@ -5,7 +5,8 @@ subheadline: "Research outputs from the AI4ED project"
 teaser: "Peer-reviewed papers, conference presentations, and preprints documenting our work on emergency department chart summarization, simulation, and workflow optimization."
 permalink: "/publications/"
 header:
-  image_fullwidth: "visuals/header_ai4ed_signal.svg"
+  image_fullwidth: "banners/publications.jpg"
+  position: "center 48%"
 ---
 
 <div class="ai4ed-section-intro">

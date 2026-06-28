@@ -10,7 +10,8 @@
       <div class="small-12 columns">
         <div class="ai4ed-site-nav__inner">
           <a class="ai4ed-site-nav__brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
-            <img src="{{ site.url }}{{ site.baseurl }}/assets/img/{{ site.logo }}" alt="">
+            {% assign nav_logo_path = '/assets/img/' | append: site.logo %}
+            <img src="{{ nav_logo_path | relative_url }}" alt="" width="1200" height="747">
             <span>{{ site.title }}</span>
           </a>
           <button class="ai4ed-site-nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav-menu">
@@ -37,7 +38,7 @@
                   {% endif %}
 
                   <li class="ai4ed-site-nav__item{% if is_active %} is-active{% endif %}">
-                    <a href="{{ nav_href }}"{% if nav_external %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.title | escape }}</a>
+                    <a href="{{ nav_href }}"{% if is_active %} aria-current="page"{% endif %}{% if nav_external %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.title | escape }}</a>
                   </li>
                 {% endif %}
               {% endfor %}
@@ -62,7 +63,7 @@
                   {% endif %}
 
                   <li class="ai4ed-site-nav__item{% if is_active %} is-active{% endif %}">
-                    <a href="{{ nav_href }}"{% if nav_external %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.title | escape }}</a>
+                    <a href="{{ nav_href }}"{% if is_active %} aria-current="page"{% endif %}{% if nav_external %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.title | escape }}</a>
                   </li>
                 {% endif %}
               {% endfor %}

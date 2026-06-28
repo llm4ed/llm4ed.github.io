@@ -1,120 +1,122 @@
 {% if page.mediaplayer == true %}
-<script>
-$('audio,video').mediaelementplayer();
-</script>
-{% endif %}
-
-<script src="{{ site.url }}{{ site.baseurl }}/assets/js/javascript.min.js"></script>
-
-{% if page.header.image_fullwidth and page.header.image_fullwidth != 'visuals/header_ai4ed_signal.svg' %}
-<script>
-    $("#masthead").backstretch("{{ site.urlimg }}{{ page.header.image_fullwidth }}", {fade: 700});
-    $("#masthead-with-text").backstretch("{{ site.urlimg }}{{ page.header.image_fullwidth }}", {fade: 700});
-</script>
+<script>$('audio,video').mediaelementplayer();</script>
 {% endif %}
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   var nav = document.querySelector('.ai4ed-site-nav');
-  if (!nav) {
-    return;
-  }
 
-  var toggle = nav.querySelector('.ai4ed-site-nav__toggle');
-  var menu = nav.querySelector('.ai4ed-site-nav__menu');
-  if (!toggle || !menu) {
-    return;
-  }
+  if (nav) {
+    var toggle = nav.querySelector('.ai4ed-site-nav__toggle');
+    var menu = nav.querySelector('.ai4ed-site-nav__menu');
+    var desktopQuery = window.matchMedia('(min-width: 64.0625em)');
 
-  function isDesktop() {
-    return window.matchMedia('(min-width: 64.0625em)').matches;
-  }
-
-  function closeMenu() {
-    toggle.setAttribute('aria-expanded', 'false');
-    menu.classList.remove('is-open');
-  }
-
-  function syncMenu() {
-    if (isDesktop()) {
-      menu.classList.remove('is-open');
+    function closeMenu(returnFocus) {
+      if (!toggle || !menu) return;
       toggle.setAttribute('aria-expanded', 'false');
+      menu.classList.remove('is-open');
+      if (returnFocus) toggle.focus();
+    }
+
+    if (toggle && menu) {
+      toggle.addEventListener('click', function () {
+        var shouldOpen = toggle.getAttribute('aria-expanded') !== 'true';
+        toggle.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
+        menu.classList.toggle('is-open', shouldOpen);
+      });
+
+      menu.addEventListener('click', function (event) {
+        if (event.target.closest('a') && !desktopQuery.matches) closeMenu(false);
+      });
+
+      document.addEventListener('click', function (event) {
+        if (!desktopQuery.matches && menu.classList.contains('is-open') && !nav.contains(event.target)) {
+          closeMenu(false);
+        }
+      });
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && menu.classList.contains('is-open')) closeMenu(true);
+      });
+
+      function syncMenu() {
+        if (desktopQuery.matches) closeMenu(false);
+      }
+
+      if (desktopQuery.addEventListener) desktopQuery.addEventListener('change', syncMenu);
+      else desktopQuery.addListener(syncMenu);
+      syncMenu();
     }
   }
-
-  toggle.addEventListener('click', function () {
-    var expanded = toggle.getAttribute('aria-expanded') === 'true';
-    toggle.setAttribute('aria-expanded', expanded ? 'false' : 'true');
-    menu.classList.toggle('is-open', !expanded);
-  });
-
-  menu.querySelectorAll('a').forEach(function (link) {
-    link.addEventListener('click', function () {
-      if (!isDesktop()) {
-        closeMenu();
-      }
-    });
-  });
-
-  document.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
-      closeMenu();
-      toggle.focus();
-    }
-  });
-
-  window.addEventListener('resize', syncMenu);
-  syncMenu();
 
   document.querySelectorAll('[data-carousel]').forEach(function (carousel) {
-    var slides = carousel.querySelectorAll('.news-entry__carousel-slide');
-    var prev = carousel.querySelector('.news-entry__carousel-button--prev');
+    var slides = Array.prototype.slice.call(carousel.querySelectorAll('.news-entry__carousel-slide'));
+    var previous = carousel.querySelector('.news-entry__carousel-button--prev');
     var next = carousel.querySelector('.news-entry__carousel-button--next');
+    var status = document.createElement('p');
     var index = 0;
 
-    if (!slides.length || !prev || !next) {
-      return;
-    }
+    if (!slides.length || !previous || !next) return;
 
-    function render() {
+    carousel.setAttribute('role', 'region');
+    carousel.setAttribute('aria-roledescription', 'carousel');
+    status.className = 'ai4ed-visually-hidden';
+    status.setAttribute('aria-live', 'polite');
+    status.setAttribute('aria-atomic', 'true');
+    carousel.appendChild(status);
+
+    slides.forEach(function (slide, slideIndex) {
+      slide.setAttribute('role', 'group');
+      slide.setAttribute('aria-roledescription', 'slide');
+      slide.setAttribute('aria-label', (slideIndex + 1) + ' of ' + slides.length);
+    });
+
+    function render(announce) {
       slides.forEach(function (slide, slideIndex) {
-        slide.classList.toggle('is-active', slideIndex === index);
+        var active = slideIndex === index;
+        slide.classList.toggle('is-active', active);
+        slide.hidden = !active;
+        slide.setAttribute('aria-hidden', active ? 'false' : 'true');
       });
+      status.textContent = announce ? 'Showing photo ' + (index + 1) + ' of ' + slides.length : '';
     }
 
-    prev.addEventListener('click', function () {
+    previous.addEventListener('click', function () {
       index = (index - 1 + slides.length) % slides.length;
-      render();
+      render(true);
     });
 
     next.addEventListener('click', function () {
       index = (index + 1) % slides.length;
-      render();
+      render(true);
     });
 
     carousel.addEventListener('keydown', function (event) {
       if (event.key === 'ArrowLeft') {
         event.preventDefault();
-        prev.click();
-      }
-
-      if (event.key === 'ArrowRight') {
+        previous.click();
+      } else if (event.key === 'ArrowRight') {
         event.preventDefault();
         next.click();
       }
     });
 
-    render();
+    if (slides.length === 1) {
+      previous.hidden = true;
+      next.hidden = true;
+    }
+    render(false);
   });
 
   var lightboxTriggers = document.querySelectorAll('[data-lightbox-src]');
-  if (lightboxTriggers.length) {
-    var lightbox = document.createElement('div');
+  if (lightboxTriggers.length && typeof HTMLDialogElement !== 'undefined') {
+    var lightbox = document.createElement('dialog');
+    var activeTrigger = null;
     lightbox.className = 'ai4ed-lightbox';
-    lightbox.hidden = true;
+    lightbox.setAttribute('aria-label', 'Expanded image');
     lightbox.innerHTML = [
-      '<div class="ai4ed-lightbox__dialog" role="dialog" aria-modal="true" aria-label="Expanded poster image">',
-      '<button class="ai4ed-lightbox__close" type="button" aria-label="Close expanded poster">&times;</button>',
+      '<div class="ai4ed-lightbox__dialog">',
+      '<button class="ai4ed-lightbox__close" type="button" aria-label="Close expanded image">&times;</button>',
       '<img class="ai4ed-lightbox__image" alt="">',
       '</div>'
     ].join('');
@@ -122,64 +124,48 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var lightboxImage = lightbox.querySelector('.ai4ed-lightbox__image');
     var lightboxClose = lightbox.querySelector('.ai4ed-lightbox__close');
-    var activeTrigger = null;
 
     function openLightbox(trigger) {
       activeTrigger = trigger;
       lightboxImage.src = trigger.getAttribute('data-lightbox-src');
       lightboxImage.alt = trigger.getAttribute('data-lightbox-alt') || '';
-      lightbox.hidden = false;
       document.body.classList.add('ai4ed-lightbox-open');
+      lightbox.showModal();
       lightboxClose.focus();
     }
 
     function closeLightbox() {
-      if (lightbox.hidden) {
-        return;
-      }
-
-      lightbox.hidden = true;
-      lightboxImage.src = '';
-      document.body.classList.remove('ai4ed-lightbox-open');
-      if (activeTrigger) {
-        activeTrigger.focus();
-      }
-      activeTrigger = null;
+      if (!lightbox.open) return;
+      lightbox.close();
     }
 
     lightboxTriggers.forEach(function (trigger) {
-      trigger.addEventListener('click', function () {
-        openLightbox(trigger);
-      });
+      trigger.addEventListener('click', function () { openLightbox(trigger); });
     });
 
+    lightboxClose.addEventListener('click', closeLightbox);
     lightbox.addEventListener('click', function (event) {
-      if (event.target === lightbox || event.target === lightboxClose) {
-        closeLightbox();
-      }
+      if (event.target === lightbox) closeLightbox();
     });
-
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape') {
-        closeLightbox();
-      }
+    lightbox.addEventListener('cancel', function (event) {
+      event.preventDefault();
+      closeLightbox();
+    });
+    lightbox.addEventListener('close', function () {
+      lightboxImage.removeAttribute('src');
+      document.body.classList.remove('ai4ed-lightbox-open');
+      if (activeTrigger) activeTrigger.focus();
+      activeTrigger = null;
     });
   }
 });
 </script>
 
-
-{% comment %}
-#  Start of Tawk.to Script
-#
-#  More information in _config.yml
-#
-{% endcomment %}
 {% if site.tawkto_embed_uri and page.tawkto == true %}
-<script type="text/javascript">
+<script>
 var $_Tawk_API={},$_Tawk_LoadStart=new Date();
 (function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+var s1=document.createElement('script'),s0=document.getElementsByTagName('script')[0];
 s1.async=true;
 s1.src='{{ site.tawkto_embed_uri }}';
 s1.charset='UTF-8';

@@ -17,11 +17,11 @@ slogan: 'AI for Emergency Department Workflows'
 description: 'AI4ED is an interdisciplinary research initiative building clinically grounded AI systems for emergency department chart summarization and workflow simulation.'
 
 # The credits show up in the includes/_footer.html – It would be nice of you to leave a link to Phlow or Feeling Responsive as a thank you :)
-credits: '© 2024 AI in Emergency Departments Research Initiative. All rights reserved.'
+credits: 'AI in Emergency Departments Research Initiative'
 
 # Main author of the website
 # See > authors.yml
-author: Denos Lab
+author: AI4ED Research Initiative
 
 # This URL is the main address for absolute links. Don't include a slash at the end.
 #
@@ -30,7 +30,7 @@ baseurl: ''
 
 # This is for the editing function in _/includes/improve_content
 # Leave it empty if your site is not on GitHub/GitHub Pages
-improve_content: https://github.com/Phlow/feeling-responsive/edit/gh-pages
+improve_content: https://github.com/llm4ed/llm4ed.github.io
 
 # This URL points directly to the images directory making
 # things easier to link to images in posts and templates. It needs a slash at the end.
@@ -48,7 +48,6 @@ logo: "ai4ed-logo-clean.png"
 plugins:
     - jekyll-asciidoc
     - jekyll-gist
-    - jekyll-paginate
 
 
 #       ____              _             __  _
@@ -58,9 +57,7 @@ plugins:
 #   /_/    \__,_/\__, /_/_/ /_/\__,_/\__/_/\____/_/ /_/
 #               /____/
 #
-paginate: 5                      # Paginates all X entries
-paginate_path: "blog/page:num"   # Pagination path › Important for blog page in /blog/ to work
-
+# Blog pagination is disabled because AI4ED does not publish the legacy theme blog.
 
 # Theme works best with Kramdown (using the table of contents function)
 markdown           : kramdown
@@ -77,6 +74,14 @@ exclude:
     - README.md
     - INSTALL.md
     - vendor
+    - blog
+    - _posts/design
+    - pages/info.md
+    - pages/design.md
+    - pages/changelog.md
+    - assets/fonts/fontcustom.yml
+    - assets/fonts/iconfont-preview.html
+    - assets/fonts/svg-files-for-custom-font
 
 
 # The language setting is used in /includes/header.html for html-settings
@@ -112,7 +117,7 @@ defaults:
       show_meta: false 	# Hide metadata for all pages
       # sidebar:    		# Possible values › left, right › by default there will be no sidebar
       comments: false
-      author: phlow     # Default author for pages
+      author: AI4ED Research Initiative
   -
     scope:
       path: ''
@@ -121,7 +126,7 @@ defaults:
       show_meta: true   # Show metadata for all posts
       # sidebar:        # Possible values › left, right › by default there will be no sidebar
       comments: false
-      author: phlow     # Default author for posts
+      author: AI4ED Research Initiative
 
 
 
@@ -168,7 +173,7 @@ apple-touch-icon-76x76-precomposed   : 'apple-touch-icon-76x76-precomposed.png'
 apple-touch-icon-72x72-precomposed   : 'apple-touch-icon-72x72-precomposed.png'
 apple-touch-icon-precomposed         : 'apple-touch-icon-precomposed.png'
 msapplication_tileimage              : 'msapplication_tileimage.png'               # Size 144x144
-msapplication_tilecolor              : '#fabb00'
+msapplication_tilecolor              : '#0b3158'
 
 
 #       ______                __                __
@@ -177,8 +182,8 @@ msapplication_tilecolor              : '#fabb00'
 #    / __/ / /_/ / /__/  __/ /_/ / /_/ / /_/ / ,<
 #   /_/    \__,_/\___/\___/_.___/\____/\____/_/|_|      Facebook-Optimization › http://j.mp/fb_optimize
 
-og_image                             : 'http://images.phlow.de/phlow/phlow_de-logo-512x.png'
-og_locale                            : 'en_EN'
+og_image                             : '/images/Activities/ai4ed-banff-retreat-2026-05-13-1-1600.jpg'
+og_locale                            : 'en_CA'
 og_type                              : 'website'
 
 
@@ -191,9 +196,7 @@ og_type                              : 'website'
 #  Open _data/socialmedia.yml to adjust the left and right topbar navigation
 #
 
-socialmedia:
-    twitter   : phlow
-    facebook  : phlow.media
+socialmedia: {}
 
 
 #        ____  _

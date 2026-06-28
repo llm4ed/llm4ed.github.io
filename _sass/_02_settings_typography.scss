@@ -16,11 +16,11 @@ Modular Scale › http://www.modularscale.com//?16,36&px&1.25&web&table
 
 $base-font-size: 16px;
 $rem-base: $base-font-size;
-$base-line-height: 1.68 !default;
+$base-line-height: 1.6 !default;
 
-$font-family-sans-serif: "IBM Plex Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-serif: "Sora", "IBM Plex Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-monospace: "IBM Plex Mono", "Lucida Console", Monaco, monospace;
+$font-family-sans-serif: "Source Sans 3", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif: "Sora", "Source Sans 3", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-monospace: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 
 $body-font-family: $font-family-sans-serif;
 $body-font-weight: 400;
@@ -38,9 +38,9 @@ $font-weight-bold: 700;
 ------------------------------------------------------------------- */
 
 $font-size-p:       $base-font-size;
-$font-size-h1:      2.9em;
-$font-size-h2:      2.2em;
-$font-size-h3:      1.65em;
+$font-size-h1:      2.7em;
+$font-size-h2:      2em;
+$font-size-h3:      1.5em;
 $font-size-h4:      1.22em;
 $font-size-h5:      1.05em;
 $font-size-small:   0.88em;

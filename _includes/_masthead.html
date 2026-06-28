@@ -44,7 +44,8 @@
 
 {% elsif page.header.image_fullwidth %}
 
-<div id="masthead" class="ai4ed-masthead-band">
+{% assign masthead_image_path = '/images/' | append: page.header.image_fullwidth %}
+<div id="masthead" class="ai4ed-masthead-band ai4ed-masthead-band--image" aria-hidden="true" style="background-image: url('{{ masthead_image_path | relative_url }}');{% if page.header.position %} background-position: {{ page.header.position }};{% endif %}">
 	<div class="row">
 		<div class="small-12 columns">
 			<div class="ai4ed-masthead-band__inner"></div>

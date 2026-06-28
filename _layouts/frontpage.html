@@ -8,10 +8,6 @@ format: frontpage
     <div class="small-12 columns">
       <section class="ai4ed-home-hero">
         <div class="ai4ed-home-hero__copy">
-          <div class="ai4ed-home-hero__logo-lockup">
-            <img class="ai4ed-home-hero__logo" src="{{ '/assets/img/ai4ed-logo-clean.png' | relative_url }}" alt="AI4ED logo">
-          </div>
-
           {% if page.hero.eyebrow %}<p class="ai4ed-home-hero__eyebrow">{{ page.hero.eyebrow }}</p>{% endif %}
           {% if page.hero.title %}<h1 class="ai4ed-home-hero__title">{{ page.hero.title }}</h1>{% endif %}
           {% if page.hero.subtitle %}<p class="ai4ed-home-hero__lead">{{ page.hero.subtitle }}</p>{% endif %}
@@ -38,7 +34,7 @@ format: frontpage
         <div class="ai4ed-home-hero__media">
           {% if page.hero.photo %}
           <figure class="ai4ed-home-hero__photo">
-            <img src="{{ page.hero.photo | relative_url }}" alt="{{ page.hero.photo_alt | default: page.hero.title | escape }}">
+            <img src="{{ page.hero.photo | relative_url }}" alt="{{ page.hero.photo_alt | default: page.hero.title | escape }}" width="{{ page.hero.photo_width | default: 1600 }}" height="{{ page.hero.photo_height | default: 1200 }}" decoding="async" fetchpriority="high">
           </figure>
           {% endif %}
 
@@ -122,7 +118,7 @@ format: frontpage
           </div>
           {% if page.activity_spotlight.image %}
           <figure class="ai4ed-activity-spotlight__media">
-            <img src="{{ page.activity_spotlight.image | relative_url }}" alt="{{ page.activity_spotlight.image_alt | default: page.activity_spotlight.title | escape }}">
+            <img src="{{ page.activity_spotlight.image | relative_url }}" alt="{{ page.activity_spotlight.image_alt | default: page.activity_spotlight.title | escape }}" width="{{ page.activity_spotlight.image_width | default: 1600 }}" height="{{ page.activity_spotlight.image_height | default: 1200 }}" loading="lazy" decoding="async">
           </figure>
           {% endif %}
         </article>
@@ -131,13 +127,11 @@ format: frontpage
   </div>
 </section>
 
-<div class="row ai4ed-roadmap-section">
+<div id="project-roadmap" class="row ai4ed-roadmap-section">
   <div class="small-12 columns">
     <div class="ai4ed-surface ai4ed-surface--roadmap">
       <p class="ai4ed-output-card__label">Project Roadmap</p>
-      <h2 class="ai4ed-roadmap-title">Roadmap for LLM applications in the emergency department</h2>
-      <p class="ai4ed-roadmap-lead">A high-level view of how capstone work, summer development, funding support, and publication goals connect across the current AI4ED program.</p>
-      <img class="ai4ed-roadmap-image" src="{{ '/images/Ed_RoadMap-home.jpg' | relative_url }}" alt="Emergency Department LLM roadmap">
+      <img class="ai4ed-roadmap-image" src="{{ '/images/Ed_RoadMap-home.jpg' | relative_url }}" alt="AI4ED roadmap showing seven milestones from the first capstone prototype through current MSc research" width="1536" height="1024" loading="lazy" decoding="async">
     </div>
   </div>
 </div>

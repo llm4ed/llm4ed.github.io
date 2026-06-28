@@ -5,7 +5,8 @@ subheadline: "Quarterly project updates"
 teaser: "Read the latest AI4ED newsletter for a concise overview of milestones, publications, demonstrations, and team updates."
 permalink: "/newsletter/"
 header:
-  image_fullwidth: "visuals/header_ai4ed_signal.svg"
+  image_fullwidth: "banners/newsletter.jpg"
+  position: "center 50%"
 ---
 
 <div class="ai4ed-section-intro">

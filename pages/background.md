@@ -1,15 +1,17 @@
 ---
 layout: page-fullwidth
-subheadline: "Project Overview and Repository Access"
+subheadline: "Clinical context, research structure, and repository access"
 title: "Getting Started"
-teaser: "Understand the clinical problem, the AI4ED research directions, and how to access the simulation repository and setup instructions."
+teaser: "Understand the clinical problem, the AI4ED research directions, the two main workstreams, and how to access the simulation repository."
 header:
-  image_fullwidth: "visuals/header_ai4ed_signal.svg"
+  image_fullwidth: "banners/getting-started.jpg"
+  position: "center 52%"
 permalink: "/background/"
 ---
 
 <div class="ai4ed-section-intro">
   <p>AI4ED studies how clinically grounded AI can reduce information friction and operational pressure in emergency care. The project combines large language models, workflow simulation, and close clinical collaboration to explore tools that are technically rigorous, operationally relevant, and realistic to evaluate.</p>
+  <p>The goal of this page is to orient collaborators, students, and technical contributors before they use the simulation repository or review the public demo.</p>
 </div>
 
 <section class="ai4ed-content-section">
@@ -52,9 +54,23 @@ permalink: "/background/"
 <section class="ai4ed-content-section">
   <h2>The project is intentionally cross-functional.</h2>
   <p>AI4ED brings together emergency medicine physicians, nurses, software engineers, machine learning researchers, data scientists, social scientists, and students. That mix helps the project stay technically strong, clinically grounded, and aligned with real-world implementation constraints.</p>
+  <div class="ai4ed-feature-grid ai4ed-feature-grid--split">
+    <article class="ai4ed-feature-card">
+      <h3>Clinical direction</h3>
+      <p>Emergency medicine collaborators help define what information matters, where workflow pressure occurs, and what a usable AI-supported process would need to respect.</p>
+    </article>
+    <article class="ai4ed-feature-card">
+      <h3>Technical development</h3>
+      <p>Engineering and machine learning contributors build simulation, summarization, evaluation, and repository infrastructure that can be inspected and improved over time.</p>
+    </article>
+    <article class="ai4ed-feature-card">
+      <h3>Evaluation and translation</h3>
+      <p>Health-systems and implementation perspectives keep the work tied to evidence, practical constraints, and the difference between a promising demo and a deployable tool.</p>
+    </article>
+  </div>
 </section>
 
-<div class="ai4ed-callout ai4ed-callout--cta">
+<div class="ai4ed-callout ai4ed-callout--cta ai4ed-callout--repository">
   <h2>Download or clone the AI4ED simulation repository.</h2>
   <p>The GitHub repository contains the simulation codebase, setup instructions, and demo guidance needed to initialize the AI4ED environment locally.</p>
   <p class="t20"><a class="button radius" href="https://github.com/denoslab/EDSim" target="_blank" rel="noopener noreferrer">Open the GitHub Repository</a></p>
