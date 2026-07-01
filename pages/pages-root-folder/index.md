@@ -59,6 +59,6 @@ homepage: true
 ---
 
 <div class="ai4ed-support-band">
-  <h2>Supported by Schulich Momentum</h2>
-  <p>AI4ED is supported by the <a href="https://schulich.ucalgary.ca/about/schulich-momentum" target="_blank" rel="noopener noreferrer">Schulich Momentum Fund</a> at the Schulich School of Engineering, University of Calgary. This support helps expand research collaboration, student involvement, and translation of clinically grounded AI ideas into working project infrastructure.</p>
+  <h2>Supported by Schulich Momentum and NFRF</h2>
+  <p>AI4ED is supported by the <a href="https://schulich.ucalgary.ca/about/schulich-momentum" target="_blank" rel="noopener noreferrer">Schulich Momentum Fund</a> at the Schulich School of Engineering, University of Calgary. This support helps expand research collaboration, student involvement, and translation of clinically grounded AI ideas into working project infrastructure. AI4ED also receives support from the <a href="https://sshrc-crsh.canada.ca/funding-financement/nfrf-fnfr/acknowledging-mention-eng.aspx" target="_blank" rel="noopener noreferrer">New Frontiers in Research Fund (NFRF)</a>, a Government of Canada program that advances interdisciplinary, high-risk, high-reward, and transformative research.</p>
 </div>
